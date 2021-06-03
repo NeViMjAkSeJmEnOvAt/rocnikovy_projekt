@@ -15,6 +15,6 @@ II. Informace získané ve škole (03.06.2021)
 - 14 stránek
 - Použití (ki cad)
 
-Odkazy:
+Odkazy a použíté Technologie:
 -------
 Markdown - [wikipedie](https://cs.wikipedia.org/wiki/Markdown)
