@@ -2,9 +2,11 @@
 
 I. Cíl projektu (03.06.2021)
 ---------------
-- Vyvoření GPS sledovače (převážně pro psy), společně s webovým GUI
+- Vyvoření GPS sledovače (převážně pro psy) + jeho lokátor 
 - Velikost sledovače by měla být maximálně velikosti mobilního telefonu (aby bylo možné jej umístit na jeho obojek, případně někde do kapsy)
-- 
+- Skládat by se měl ze dvou částí (sledovač, lokátor)
+- Sledovač - bude napájen baterií, krabička o menší velikosti, vysílá signál z místa na kterém se nachází
+- Lokátor - na displeji se bude zobrazovat: směr k pozici, vzádlenost, síla baterie, síla signálu
 
 II. Informace získané ve škole (03.06.2021)
 ------------------------------
