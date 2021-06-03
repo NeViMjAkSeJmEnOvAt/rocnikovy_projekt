@@ -1,6 +1,6 @@
-# Ročníkový projekt - část 1. [Hrubý návrh]
-- cil projektu: 
-- zdroje (KONKURENCE, zdroje co pouzivame)
-- problemy se kterymi sme se setkali
+# Ročníkový projekt - část 1. [Školní informace]
+## Cíl projektu: 
+- Zdroje (KONKURENCE, zdroje co pouzivame)
+- Problémy se kterymi sme se setkali
 - 14 stránek
-- použití (ki cad)
+- Použití (ki cad)
