@@ -6,3 +6,7 @@ I. Školní informace
 - Problémy se kterymi sme se setkali
 - 14 stránek
 - Použití (ki cad)
+
+Odkazy:
+-------
+Markdown - [wikipedie](https://cs.wikipedia.org/wiki/Markdown)
