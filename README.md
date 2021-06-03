@@ -1,11 +1,11 @@
 # Ročníkový projekt - část 1. Hrubý návrh
-I. Cíl projektu (03.06.2021)
+I. Cíl projektu 
 ------------------
 - Vyvoření GPS sledovače (převážně pro psy), společně s webovým GUI
 - Velikost sledovače by měla být maximálně velikosti mobilního telefonu (aby bylo možné jej umístit na jeho obojek, případně někde do kapsy)
 - 
 
-II. Informace získané ve škole (03.06.2021)
+II. Informace získané ve škole
 ------------------
 - Zdroje (KONKURENCE, zdroje co pouzivame)
 - Problémy se kterymi sme se setkali
@@ -14,4 +14,4 @@ II. Informace získané ve škole (03.06.2021)
 
 Odkazy:
 -------
-Markdown - [wikipedie](https://cs.wikipedia.org/wiki/Markdown) (03.06.2021)
+Markdown - [wikipedie](https://cs.wikipedia.org/wiki/Markdown)
