@@ -1,4 +1,4 @@
-## Ročníkový projekt - část 1. Hrubý návrh
+# Ročníkový projekt - část 1. Hrubý návrh
 I. Cíl projektu 
 ------------------
 - Vyvoření GPS sledovače (převážně pro psy), společně s webovým GUI
