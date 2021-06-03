@@ -1,2 +1,3 @@
 # rocnikovy_projekt
-- ahoj
+- cil projektu
+- zdroje (KONKURENCE, zdroje co pouzivame)
