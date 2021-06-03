@@ -1,4 +1,4 @@
-# Ročníkový projekt 
+# Ročníkový projekt - část 1. [Hrubý návrh]
 - cil projektu: 
 - zdroje (KONKURENCE, zdroje co pouzivame)
 - problemy se kterymi sme se setkali
