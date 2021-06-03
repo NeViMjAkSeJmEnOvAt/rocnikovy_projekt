@@ -10,8 +10,9 @@ I. Cíl projektu (03.06.2021)
 - Lokátor - na displeji se bude zobrazovat: směr k pozici, vzádlenost, síla baterie, síla signálu
 ### Problémy
 - Znovu se naučit jazyk na programování mikrokontrolerů (wiring)
-- zjistit jaké technologie použít
-- zjistit a nakoupit hardware (porovnat ceny Českých a zahraničních obchodů)
+- Zjistit jaké technologie použít
+- Zjistit a nakoupit hardware (porovnat ceny Českých a zahraničních obchodů)
+- Vytvořit 3d model krabičky pro celý hardware (Late game)
 
 II. Informace získané ve škole (03.06.2021)
 -------------------------------------------
