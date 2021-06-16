@@ -14,7 +14,7 @@ I. Cíl projektu (03.06.2021)
 - Zjistit a nakoupit hardware (porovnat ceny Českých a zahraničních obchodů)
 - Vytvořit 3d model krabičky pro celý hardware (Late game)
 
-II. Informace získané ve škole (03.06.2021)
+II. Informace získané ve škole (03.06.2021), edit(16.06.)
 -------------------------------------------
 ### Informace k projektu
 - Zdroje (KONKURENCE, zdroje co pouzivame) 
