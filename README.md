@@ -34,18 +34,17 @@ III. Konkurence (16.06.2021)
 ### Garmin (16.06.2021)
 * [Garmin](https://www.elektro-obojky.cz/gps-obojky-garmin/)
 * 9000 - 29000 kč
-
-__Použité technologie__
-- dotykový display
-- GPS + GLONASS a VHF
-- spustitelný alarm + sdílení polohy
-- sledování ostatních obojků
-- nastavení povoleného rádiusu
-- 3D kompas
-- upozornění na štěkot psa
-- možnost použití vibrace / tónu / impulzu
-- 212g
-- režim spánku
+* __Použité technologie__
+* dotykový display
+* GPS + GLONASS a VHF
+* spustitelný alarm + sdílení polohy
+* sledování ostatních obojků
+* nastavení povoleného rádiusu
+* 3D kompas
+* upozornění na štěkot psa
+* možnost použití vibrace / tónu / impulzu
+* 212g
+* režim spánku
 
 Odkazy a použíté technologie:
 -------
