@@ -22,10 +22,10 @@ II. Informace získané ve škole (03.06.2021)
 - 14 stránek
 - Použití (ki cad)
 ### Hodnocení projektu
-- dokumentace __40%__
-- projekt samotný __20%__
-- prezentace __20%__
-- průběžnost __20%__
+- dokumentace - __40%__
+- projekt samotný - __20%__
+- prezentace - __20%__
+- průběžnost - __20%__
 
 Odkazy a použíté technologie:
 -------
