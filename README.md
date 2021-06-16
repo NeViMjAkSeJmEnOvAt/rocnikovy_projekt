@@ -25,7 +25,7 @@ II. Informace získané ve škole (03.06.2021), edit (16.06.)
 - projekt samotný - __40%__
 - dokumentace - __20%__ (všechny informace o projektu, problémy, časové rozvržení, časová náročnost..)
 - prezentace - __20%__
-- průběžnost - __20%__ (jak se na projektu pracuje postopně)
+- průběžnost - __20%__ (jak se na projektu pracuje postupně)
 
 Odkazy a použíté technologie:
 -------
