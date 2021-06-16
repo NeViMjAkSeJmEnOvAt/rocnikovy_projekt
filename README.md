@@ -33,6 +33,7 @@ III. Konkurence (16.06.2021)
 - Eshop [Elektro obojky](https://www.elektro-obojky.cz/gps-obojky-pro-psy/)
 ### Garmin
 * [Garmin](https://www.elektro-obojky.cz/gps-obojky-garmin/)
+* 6-14.5km
 * 9000 - 29000 kč
 * dotykový display
 * GPS + GLONASS a VHF
