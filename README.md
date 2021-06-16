@@ -28,6 +28,10 @@ II. Informace získané ve škole (03.06.2021)
 - prezentace - __20%__ ()
 - průběžnost - __20%__ (jak se na projektu pracuje postupně)
 
+III. Konkurence (16.06.2021)
+-------------------------------------------
+- Eshop [Elektro obojky](https://www.elektro-obojky.cz/gps-obojky-pro-psy/)
+
 Odkazy a použíté technologie:
 -------
 Markdown - [wikipedie](https://cs.wikipedia.org/wiki/Markdown)
