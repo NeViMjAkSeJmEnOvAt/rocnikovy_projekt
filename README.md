@@ -31,10 +31,11 @@ II. Informace získané ve škole (03.06.2021)
 III. Konkurence (16.06.2021)
 -------------------------------------------
 - Eshop [Elektro obojky](https://www.elektro-obojky.cz/gps-obojky-pro-psy/)
-## Garmin (16.06.2021)
+### Garmin (16.06.2021)
 * [Garmin](https://www.elektro-obojky.cz/gps-obojky-garmin/)
 * 9000 - 29000 kč
-### Použité technologie 
+
+__Použité technologie__
 - dotykový display
 - GPS + GLONASS a VHF
 - spustitelný alarm + sdílení polohy
