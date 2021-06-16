@@ -47,6 +47,7 @@ III. Konkurence (16.06.2021)
 * režim spánku
 ### Tracker
 * [Tracker](https://www.elektro-obojky.cz/gps-obojky-pro-psy-tracker/)
+* neomezený dosah
 * 15000 - 25000 kč
 * Využití 3G a 2G
 * sledování ostatních obojků
