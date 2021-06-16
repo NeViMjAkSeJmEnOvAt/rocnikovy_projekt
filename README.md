@@ -21,6 +21,7 @@ II. Informace získané ve škole (03.06.2021)
 - Problémy se kterymi sme se setkali
 - 14 stránek
 - Použití (ki cad)
+- projekt nemusí být na 100% funkční, musí být vidět postup
 ### Hodnocení projektu (16.06.2021)
 - projekt samotný - __40%__
 - dokumentace - __20%__ (všechny informace o projektu, problémy, časové rozvržení, časová náročnost..)
