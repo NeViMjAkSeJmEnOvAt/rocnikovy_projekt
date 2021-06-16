@@ -16,6 +16,7 @@ I. Cíl projektu (03.06.2021)
 
 II. Informace získané ve škole (03.06.2021)
 -------------------------------------------
+### Informace k projektu
 - Zdroje (KONKURENCE, zdroje co pouzivame) 
 - Problémy se kterymi sme se setkali
 - 14 stránek
