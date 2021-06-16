@@ -34,7 +34,6 @@ III. Konkurence (16.06.2021)
 ### Garmin (16.06.2021)
 * [Garmin](https://www.elektro-obojky.cz/gps-obojky-garmin/)
 * 9000 - 29000 kč
-* __Použité technologie__
 * dotykový display
 * GPS + GLONASS a VHF
 * spustitelný alarm + sdílení polohy
@@ -45,6 +44,23 @@ III. Konkurence (16.06.2021)
 * možnost použití vibrace / tónu / impulzu
 * 212g
 * režim spánku
+### Tracker (16.06.2021)
+* [Tracker](https://www.elektro-obojky.cz/gps-obojky-pro-psy-tracker/)
+* 15000 - 25000 kč
+* Využití 3G a 2G
+* sledování ostatních obojků
+* přes mobil
+### Dogtrace (16.06.2021)
+* [Dogtrace](https://www.elektro-obojky.cz/gps-obojky-dogtrace/)
+* 10000 - 20000 kč
+* až 20km
+* zvukový lokátor
+* možných až 13 obojků
+* plně vodotěsný
+* 40+ hodin výdrž
+* kompas
+* ukládání bodů na mapě
+
 
 Odkazy a použíté technologie:
 -------
