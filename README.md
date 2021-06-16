@@ -12,7 +12,7 @@ I. Cíl projektu (03.06.2021)
 - Znovu se naučit jazyk na programování mikrokontrolerů (wiring)
 - Zjistit jaké technologie použít
 - Zjistit a nakoupit hardware (porovnat ceny Českých a zahraničních obchodů)
-- Vytvořit 3d model krabičky pro celý hardware (Late game)
+- Vytvořit 3d model krabičky pro celý hardware (Late game) >> poté vytisknu na 3d tiskárně (Ender 3 V2)
 
 II. Informace získané ve škole (03.06.2021)
 -------------------------------------------
