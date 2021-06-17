@@ -67,6 +67,6 @@ III. Konkurence (16.06.2021)
 
 Odkazy a použíté technologie:
 -------
-Markdown - [wikipedie](https://cs.wikipedia.org/wiki/Markdown)
-Micropython - [Micropython](https://randomnerdtutorials.com/micropython-esp32-esp8266-vs-code-pymakr/)
-esp32 debugger - [Debugger](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/jtag-debugging/using-debugger.html)
+* Markdown - [wikipedie](https://cs.wikipedia.org/wiki/Markdown)
+* Micropython - [Micropython](https://randomnerdtutorials.com/micropython-esp32-esp8266-vs-code-pymakr/)
+* esp32 debugger - [Debugger](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/jtag-debugging/using-debugger.html)
