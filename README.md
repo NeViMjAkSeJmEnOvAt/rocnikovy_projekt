@@ -22,6 +22,7 @@ II. Informace získané ve škole (03.06.2021)
 - 14 stránek
 - Použití (ki cad)
 - projekt nemusí být na 100% funkční, musí být vidět postup
+- jak debugovat esp - 
 ### Hodnocení projektu (16.06.2021)
 - projekt samotný - __40%__
 - dokumentace - __20%__ (všechny informace o projektu, problémy, časové rozvržení, časová náročnost..)
@@ -67,3 +68,5 @@ III. Konkurence (16.06.2021)
 Odkazy a použíté technologie:
 -------
 Markdown - [wikipedie](https://cs.wikipedia.org/wiki/Markdown)
+Micropython - [Micropython](https://randomnerdtutorials.com/micropython-esp32-esp8266-vs-code-pymakr/)
+esp32 debugger - [Debugger](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/jtag-debugging/using-debugger.html)
