@@ -64,6 +64,21 @@ III. Konkurence (16.06.2021)
 * kompas
 * ukládání bodů na mapě
 
+IV. Hrubý Harmonogram (02.09.2021)
+-------------------------------------------
+### První polovina Září
+
+### První polovina Září
+
+### První polovina Říjnu
+
+### Druhá polovina Říjnu
+
+### První polovina Listopadu
+
+### Druhá polovina Listopadu
+
+### První polovina Prosince (Termín 10.12.2021)
 
 Odkazy a použíté technologie:
 -------
