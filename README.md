@@ -8,6 +8,7 @@ I. Cíl projektu (03.06.2021)
 - Skládat by se měl ze dvou částí (sledovač, lokátor)
 - Sledovač - bude napájen baterií, krabička o menší velikosti, vysílá signál z místa na kterém se nachází
 - Lokátor - na displeji se bude zobrazovat: směr k pozici, vzádlenost, síla baterie, síla signálu
+- esp32 LORA
 ### Problémy
 - Znovu se naučit jazyk na programování mikrokontrolerů (wiring)
 - Zjistit jaké technologie použít
