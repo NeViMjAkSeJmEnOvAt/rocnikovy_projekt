@@ -87,6 +87,7 @@ Odkazy a použíté technologie:
 * Micropython - [Micropython](https://randomnerdtutorials.com/micropython-esp32-esp8266-vs-code-pymakr/), [Instalace](https://blog.iservery.com/2020/04/06/instalace-micropython-a-vscode/)
 * esp32 debugger - [Debugger](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/jtag-debugging/using-debugger.html), [Github](https://github.com/maakbaas/esp8266-iot-framework)
 * esp32 LORA - https://www.ebay.com/itm/173624285281?var=472302684739&hash=item286cd05861:g:jAMAAOSwRW9chySA + gps modul
+* NMEA - https://en.wikipedia.org/wiki/NMEA_2000
 
 
 
