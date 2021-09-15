@@ -1,4 +1,4 @@
-# Ročníkový projekt - část 1. Hrubý návrh
+# Ročníkový projekt (Sledovací obojek pro psy) - část 1. Hrubý návrh
 
 I. Cíl projektu (03.06.2021)
 ----------------------------
@@ -99,7 +99,7 @@ IV. Konečný Harmonogram (02.09.2021)
 * Červen 2021 - udělání Githubu, Získané informace o konkurenci, Cíl projektu
 * 15.09.2021 - sepsání hrubého Harmonogramu
 
-# Ročníkový projekt - část 2. Sestavování
+# Ročníkový projekt (Sledovací obojek pro psy) - část 2. Sestavování
 
 
 Odkazy a použíté technologie:
