@@ -67,19 +67,30 @@ III. Konkurence (16.06.2021)
 
 IV. Hrubý Harmonogram (02.09.2021)
 -------------------------------------------
-### První polovina Září
-
-### První polovina Září
+### Září
+* Sepsat nutné zdroje
+* Objednat hardware
+* Zjistit všechny věci co budou potřeba
 
 ### První polovina Říjnu
+* Seznámit se s technologiemi
+* Rozpracovat hardware
 
 ### Druhá polovina Říjnu
+* Začít psát kód
+* Sestavit hardware 
 
 ### První polovina Listopadu
+* Pomalu dokončovat kód
+* Debugování a chyby
 
 ### Druhá polovina Listopadu
+* Finální úpravy
+* Zbytek času na to, pokud něco nebudu stíhat
 
 ### První polovina Prosince (Termín 10.12.2021)
+* Sepsat dokumentaci
+* Poslední testy
 
 Odkazy a použíté technologie:
 -------
