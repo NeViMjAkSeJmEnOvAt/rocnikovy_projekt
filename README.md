@@ -83,10 +83,12 @@ IV. Předpokládaný Harmonogram (02.09.2021)
 ### První polovina Listopadu
 * Pomalu dokončovat kód
 * Debugování a chyby
+* Udělat návrh obalu 
 
 ### Druhá polovina Listopadu
 * Finální úpravy
 * Zbytek času na to, pokud něco nebudu stíhat
+* Vytisknout obal na 3d tiskárně
 
 ### První polovina Prosince (Termín 10.12.2021)
 * Sepsat dokumentaci
@@ -94,7 +96,8 @@ IV. Předpokládaný Harmonogram (02.09.2021)
 
 IV. Konečný Harmonogram (02.09.2021)
 -------------------------------------------
-15.09.2021
+Červen 2021 - udělání Githubu, Získané informace o konkurenci, Cíl projektu
+15.09.2021 - sepsání hrubého Harmonogramu
 
 # Ročníkový projekt - část 2. Sestavování
 
