@@ -65,7 +65,7 @@ III. Konkurence (16.06.2021)
 * kompas
 * ukládání bodů na mapě
 
-IV. Předpokládaný Harmonogram (02.09.2021)
+IV. Předpokládaný Harmonogram (15.09.2021)
 -------------------------------------------
 ### Září
 * Sepsat nutné zdroje
@@ -94,7 +94,7 @@ IV. Předpokládaný Harmonogram (02.09.2021)
 * Sepsat dokumentaci
 * Poslední testy
 
-IV. Konečný Harmonogram (02.09.2021)
+IV. Konečný Harmonogram 
 -------------------------------------------
 * Červen 2021 - udělání Githubu, Získané informace o konkurenci, Cíl projektu
 * 15.09.2021 - sepsání hrubého Harmonogramu
