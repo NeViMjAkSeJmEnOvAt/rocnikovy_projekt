@@ -96,8 +96,8 @@ IV. Předpokládaný Harmonogram (02.09.2021)
 
 IV. Konečný Harmonogram (02.09.2021)
 -------------------------------------------
-Červen 2021 - udělání Githubu, Získané informace o konkurenci, Cíl projektu
-15.09.2021 - sepsání hrubého Harmonogramu
+* Červen 2021 - udělání Githubu, Získané informace o konkurenci, Cíl projektu
+* 15.09.2021 - sepsání hrubého Harmonogramu
 
 # Ročníkový projekt - část 2. Sestavování
 
