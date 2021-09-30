@@ -105,7 +105,10 @@ IV. Konečný Harmonogram
 I. Zporvoznění Arduino IDE pro ESP32
 --------------------------------------
 * 30.09.2021 - Zprovoznění IDE, pro práci s esp32 a první test funkčnosti
-* Spuštění programů "test1" a "test2"
+* Spuštění programu na vyhledání sítě, úspěšně splněno
+* Vyřešený problém - systémový monitor vypisoval corruptované výsledky, musel sem změnit počet baudů
+* Dále test displaye
+* Víte informací v adresáři "ESPtest1"
 
 Odkazy a použíté technologie:
 -------
