@@ -98,9 +98,14 @@ IV. Konečný Harmonogram
 -------------------------------------------
 * Červen 2021 - udělání Githubu, Získané informace o konkurenci, Cíl projektu
 * 15.09.2021 - sepsání hrubého Harmonogramu
+* 30.09.2021 - spuštění IDE + první test fungování esp
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 2. Sestavování
 
+I. Zporvoznění Arduino IDE pro ESP32
+--------------------------------------
+* 30.09.2021 - Zprovoznění IDE, pro práci s esp32 a první test funkčnosti
+* Spuštění programů "test1" a "test2"
 
 Odkazy a použíté technologie:
 -------
