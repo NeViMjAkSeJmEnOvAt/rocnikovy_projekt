@@ -102,6 +102,7 @@ IV. Konečný Harmonogram
 * Červen 2021 - udělání Githubu, Získané informace o konkurenci, Cíl projektu
 * 15.09.2021 - sepsání hrubého Harmonogramu
 * 30.09.2021 - spuštění IDE + první test fungování esp
+* 06.10.2021 - Změna IDE + snaha o instalaci SPIFFS
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 2. Sestavování
 
