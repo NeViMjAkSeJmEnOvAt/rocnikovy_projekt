@@ -113,6 +113,13 @@ I. Zporvoznění Arduino IDE pro ESP32
 * Dále test displaye
 * Víte informací v adresáři "ESPtest1"
 
+II. Instalace PlatformioIDE + SPIFFS
+--------------------------------------
+* Změna platformy z Arduino IDE na Platformio IDE ve Visual Studio Code
+* 06.10.2021 - Instalace Platformio IDE do Visual Studio Code (pro práci s ESP32)
+* Zkouška instalace SPIFFS (Problém s instalací)
+
+
 Odkazy a použíté technologie:
 -------
 * Markdown - [wikipedie](https://cs.wikipedia.org/wiki/Markdown)
@@ -120,7 +127,7 @@ Odkazy a použíté technologie:
 * esp32 debugger - [Debugger](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/jtag-debugging/using-debugger.html), [Github](https://github.com/maakbaas/esp8266-iot-framework)
 * esp32 LORA - https://www.ebay.com/itm/173624285281?var=472302684739&hash=item286cd05861:g:jAMAAOSwRW9chySA + gps modul
 * NMEA - https://en.wikipedia.org/wiki/NMEA_2000
-* Arduino IDE pro ESP32 - https://randomnerdtutorials.com/installing-esp32-arduino-ide-2-0/
+
 
 
 
