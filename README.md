@@ -119,6 +119,9 @@ II. Instalace PlatformioIDE + SPIFFS
 * Změna platformy z Arduino IDE na Platformio IDE ve Visual Studio Code
 * 06.10.2021 - Instalace Platformio IDE do Visual Studio Code (pro práci s ESP32)
 * Zkouška instalace SPIFFS (Problém s instalací)
+* 12.10.2021 - Snaha o spuštění webového serveru na esp32
+
+
 
 
 Odkazy a použíté technologie:
@@ -129,6 +132,7 @@ Odkazy a použíté technologie:
 * esp32 LORA - https://www.ebay.com/itm/173624285281?var=472302684739&hash=item286cd05861:g:jAMAAOSwRW9chySA + gps modul
 * NMEA - https://en.wikipedia.org/wiki/NMEA_2000
 * spiffs - https://randomnerdtutorials.com/esp32-vs-code-platformio-spiffs/
+* spiffs webserver - https://randomnerdtutorials.com/esp32-web-server-spiffs-spi-flash-file-system/
 
 
 
