@@ -11,6 +11,10 @@ by including it, with the C preprocessing directive `#include'.
 #include "WiFi.h"
 #include "ESPAsyncWebServer.h"
 #include "SPIFFS.h"
+#include <Wire.h>
+#include "Adafruit_GFX.h"
+#include "Adafruit_SSD1306.h"
+
 
 
 int main (void)
