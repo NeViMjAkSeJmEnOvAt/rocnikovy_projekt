@@ -11,93 +11,79 @@
 #define SCREEN_WIDTH 128 
 #define SCREEN_HEIGHT 64
 
-// Replace with your network credentials
-const char* ssid = "MK 2.4GHz";
-const char* password = "MK12345678";
+const char* ssid = "MK 2.4GHz"; //nazev wifi, na kterou se zařízení připojí
+const char* password = "MK12345678"; //heslo k wifi
 int promenna = 0;
+int LedPin = 2; //vystup ledky na desce
+String LedStav; //stav ledky 
 
-// Set LED GPIO
-const int ledPin = 2;
-// Stores LED state
-String ledState;
-// Create AsyncWebServer object on port 80
 AsyncWebServer server(80);
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RST);
 
-// Replaces placeholder with LED state value
 String processor(const String& var){
   Serial.println(var);
   if(var == "STATE"){
-    if(digitalRead(ledPin)){
-      ledState = "ON";
+    if(digitalRead(LedPin)){
+      LedStav = "ON";
     }
     else{
-      ledState = "OFF";
+      LedStav = "OFF";
     }
-    Serial.print(ledState);
-    return ledState;
+    Serial.print(LedStav);
+    return LedStav;
   }
   return String();
 }
- 
+
 void setup(){
   Serial.begin(115200);
-  pinMode(ledPin, OUTPUT);
-  
+  pinMode(LedPin, OUTPUT);
+
+  ////////////////display////////////////////
   pinMode(OLED_RST, OUTPUT);
   digitalWrite(OLED_RST, LOW);
   delay(20);
   digitalWrite(OLED_RST, HIGH);
- Wire.begin(OLED_SDA, OLED_SCL);
-  if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3c, false, false)) { // Address 0x3C for 128x32
-    Serial.println(F("SSD1306 allocation failed"));
-    for(;;); // Don't proceed, loop forever
-  }
+  ////////////////////////////////////////
 
-    // Initialize SPIFFS
-  if(!SPIFFS.begin(true)){
+ Wire.begin(OLED_SDA, OLED_SCL);
+  if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3c, false, false)) { // Adresa 0x3C pro 128x32
+    Serial.println(F("SSD1306 allocation failed"));
+    for(;;); // Nepůjde do nekonečna
+  }
+  if(!SPIFFS.begin(true)){ //inicializace SPIFFsu
     Serial.println("An Error has occurred while mounting SPIFFS");
     return;
   }
-
-  // Connect to Wi-Fi
-  WiFi.begin(ssid, password);
+  WiFi.begin(ssid, password); //připojení k wifi
   while (WiFi.status() != WL_CONNECTED) {
     delay(2000);
     Serial.println("Connecting to WiFi..");
   }
+  Serial.println(WiFi.localIP()); //vypíše IP adresu zařízení
 
-  // Print ESP32 Local IP Address
-  Serial.println(WiFi.localIP());
-
-  // Route for root / web page
-  server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
+  server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){ //cesta pro root / webové stránky
     request->send(SPIFFS, "/index.html", String(), false, processor);
   });
-  
-  // Route to load style.css file
-  server.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request){
+
+  server.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request){ //cesta pro .css soubor
     request->send(SPIFFS, "/style.css", "text/css");
   });
 
-  // Route to set GPIO to HIGH
-  server.on("/on", HTTP_GET, [](AsyncWebServerRequest *request){
-    digitalWrite(ledPin, HIGH);
+  server.on("/on", HTTP_GET, [](AsyncWebServerRequest *request){ //cesta pro zapnutí ledky
+    digitalWrite(LedPin, HIGH);
     promenna = 1;    
     request->send(SPIFFS, "/index.html", String(), false, processor);
   });
-  
-  // Route to set GPIO to LOW
-  server.on("/off", HTTP_GET, [](AsyncWebServerRequest *request){
-    digitalWrite(ledPin, LOW);
+
+  server.on("/off", HTTP_GET, [](AsyncWebServerRequest *request){ //cesta pro vypnutí ledky
+    digitalWrite(LedPin, LOW);
     promenna = 0;    
     request->send(SPIFFS, "/index.html", String(), false, processor);
   });
 
-  // Start server
-  server.begin();
+  server.begin(); //zapne server
 }
- 
 void loop(){
   
   display.clearDisplay();
