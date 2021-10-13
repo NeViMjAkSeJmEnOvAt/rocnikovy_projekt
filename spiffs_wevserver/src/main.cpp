@@ -14,6 +14,8 @@
 const char* ssid = "MK 2.4GHz"; //nazev wifi, na kterou se zařízení připojí
 const char* password = "MK12345678"; //heslo k wifi
 int promenna = 0;
+int VypisCislo = 0;
+String Slovo = "Test";
 int LedPin = 2; //vystup ledky na desce
 String LedStav; //stav ledky 
 
@@ -82,21 +84,35 @@ void setup(){
     request->send(SPIFFS, "/index.html", String(), false, processor);
   });
 
+  server.on("/plus", HTTP_GET, [](AsyncWebServerRequest *request){ //cesta pro přidání čísla
+    VypisCislo ++;    
+    request->send(SPIFFS, "/index.html", String(), false, processor);
+  });
+
+  server.on("/minus", HTTP_GET, [](AsyncWebServerRequest *request){ //cesta pro přidání čísla
+    VypisCislo --;    
+    request->send(SPIFFS, "/index.html", String(), false, processor);
+  });
+  
   server.begin(); //zapne server
 }
 void loop(){
   
   display.clearDisplay();
   display.setTextColor(WHITE);
-  display.setTextSize(3);
+  display.setTextSize(2);
   display.setCursor(0,0);
-  display.print("LED IS: ");
+  display.print("LED IS:");
   if(promenna == 1){
-    display.print("ON");
+    display.println("ON");
   }
   else{
-    display.print("OFF");
+    display.println("OFF");
   }
+  display.print("CISLO: ");
+  display.println(VypisCislo);
+  display.setTextSize(1);
+  display.println(WiFi.localIP());
   
   display.display();
 
