@@ -14,6 +14,7 @@ I. Cíl projektu (03.06.2021)
 - Zjistit jaké technologie použít
 - Zjistit a nakoupit hardware (porovnat ceny Českých a zahraničních obchodů)
 - Vytvořit 3d model krabičky pro celý hardware (Late game) >> poté vytisknu na 3d tiskárně (Ender 3 V2)
+- LoRa Reciever nepřijímá Packety odeslané LoRa Senderem
 
 II. Informace získané ve škole (03.06.2021)
 -------------------------------------------
@@ -107,6 +108,8 @@ IV. Konečný Harmonogram
 * 13.10.2021 - SPIFFS funguje, webový server funguje
 * 14.10.2021 - úprava kódu, editace webu
 * 15.10.2021 - seznamování se s GPS modulem
+* 28.10.2021 - zprovoznění LoRa zařízení
+* 29.10.2021 - Snaha o komunikaci mezi zařízeními
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 2. Sestavování
 
@@ -126,6 +129,8 @@ II. Instalace PlatformioIDE + SPIFFS
 * 12.10.2021 - Snaha o spuštění webového serveru na esp32
 * 13.10.2021 - webserver funguje, vypis na obrazovku
 
+III. Komunikace mezi dvěmi LoRa zařízeními
+------------------------------------------
 
 
 
