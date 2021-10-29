@@ -2,6 +2,7 @@
 #include "Adafruit_GFX.h"
 #include "Adafruit_SSD1306.h"
 #include "ESPAsyncWebServer.h"
+#include "SoftwareSerial.h"
 #include "SPIFFS.h"
 #include "Wire.h"
 
@@ -14,10 +15,14 @@
 const char* ssid = "MK 2.4GHz"; //nazev wifi, na kterou se zařízení připojí
 const char* password = "MK12345678"; //heslo k wifi
 int promenna = 0;
-int VypisCislo = 0;
+int VypisCislo;
+int PIN1 = 3;
+int PIN2 = 1;  
 String Slovo = "Test";
 int LedPin = 2; //vystup ledky na desce
 String LedStav; //stav ledky 
+
+SoftwareSerial Test(PIN1, PIN2);
 
 AsyncWebServer server(80);
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RST);
@@ -34,11 +39,15 @@ String processor(const String& var){
     Serial.print(LedStav);
     return LedStav;
   }
+  if(var == "NUMB"){
+    return String(VypisCislo);
+  }
   return String();
 }
 
 void setup(){
   Serial.begin(115200);
+  Test.begin(9600);
   pinMode(LedPin, OUTPUT);
 
   ////////////////display////////////////////
@@ -53,6 +62,7 @@ void setup(){
     Serial.println(F("SSD1306 allocation failed"));
     for(;;); // Nepůjde do nekonečna
   }
+
   if(!SPIFFS.begin(true)){ //inicializace SPIFFsu
     Serial.println("An Error has occurred while mounting SPIFFS");
     return;
@@ -97,7 +107,7 @@ void setup(){
   server.begin(); //zapne server
 }
 void loop(){
-  
+
   display.clearDisplay();
   display.setTextColor(WHITE);
   display.setTextSize(2);
@@ -113,7 +123,7 @@ void loop(){
   display.println(VypisCislo);
   display.setTextSize(1);
   display.println(WiFi.localIP());
-  
   display.display();
 
+   delay(1000);
 }
