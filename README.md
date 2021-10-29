@@ -103,6 +103,10 @@ IV. Konečný Harmonogram
 * 15.09.2021 - sepsání hrubého Harmonogramu
 * 30.09.2021 - spuštění IDE + první test fungování esp
 * 06.10.2021 - Změna IDE + snaha o instalaci SPIFFS
+* 12.10.2021 - seznamování se SPIFFS
+* 13.10.2021 - SPIFFS funguje, webový server funguje
+* 14.10.2021 - úprava kódu, editace webu
+* 15.10.2021 - seznamování se s GPS modulem
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 2. Sestavování
 
@@ -120,6 +124,8 @@ II. Instalace PlatformioIDE + SPIFFS
 * 06.10.2021 - Instalace Platformio IDE do Visual Studio Code (pro práci s ESP32)
 * Zkouška instalace SPIFFS (Problém s instalací)
 * 12.10.2021 - Snaha o spuštění webového serveru na esp32
+* 13.10.2021 - webserver funguje, vypis na obrazovku
+
 
 
 
