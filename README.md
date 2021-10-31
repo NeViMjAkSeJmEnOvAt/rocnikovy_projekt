@@ -145,6 +145,8 @@ Odkazy a použíté technologie:
 * NMEA - https://en.wikipedia.org/wiki/NMEA_2000
 * spiffs - https://randomnerdtutorials.com/esp32-vs-code-platformio-spiffs/
 * spiffs webserver - https://randomnerdtutorials.com/esp32-web-server-spiffs-spi-flash-file-system/
+* LoRa komunikace - https://github.com/HelTecAutomation/Heltec_ESP32/tree/master/examples/LoRa
+* LoRa komunikace 2 - https://randomnerdtutorials.com/esp32-lora-rfm95-transceiver-arduino-ide/
 
 
 
