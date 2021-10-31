@@ -15,6 +15,7 @@ I. Cíl projektu (03.06.2021)
 - Zjistit a nakoupit hardware (porovnat ceny Českých a zahraničních obchodů)
 - Vytvořit 3d model krabičky pro celý hardware (Late game) >> poté vytisknu na 3d tiskárně (Ender 3 V2)
 - LoRa Reciever nepřijímá Packety odeslané LoRa Senderem
+- Zařízení komunikují, pokud se jejich antény dotýkají jinak ne
 
 II. Informace získané ve škole (03.06.2021)
 -------------------------------------------
@@ -110,6 +111,7 @@ IV. Konečný Harmonogram
 * 15.10.2021 - seznamování se s GPS modulem
 * 28.10.2021 - zprovoznění LoRa zařízení
 * 29.10.2021 - Snaha o komunikaci mezi zařízeními
+* 31.10.2021 - Zařízení mezi sebou komunikují 
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 2. Sestavování
 
@@ -131,9 +133,8 @@ II. Instalace PlatformioIDE + SPIFFS
 
 III. Komunikace mezi dvěmi LoRa zařízeními
 ------------------------------------------
-
-
-
+* Zařízení komunikují pomocí jednoduchých zpráv
+* Problém s tím, že nefunguje využití antény, zařízení komunikují jen, když se antény dotýkají
 
 Odkazy a použíté technologie:
 -------
