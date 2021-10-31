@@ -2,7 +2,7 @@
 #include <LoRa.h>
 
 //define the pins used by the transceiver module
-#define ss 18
+#define ss 19
 #define rst 14
 #define dio0 26
 
