@@ -15,8 +15,7 @@ I. Cíl projektu (03.06.2021)
 - Zjistit a nakoupit hardware (porovnat ceny Českých a zahraničních obchodů)
 - Vytvořit 3d model krabičky pro celý hardware (Late game) >> poté vytisknu na 3d tiskárně (Ender 3 V2)
 - LoRa Reciever nepřijímá Packety odeslané LoRa Senderem
-- Zařízení komunikují, pokud se jejich antény dotýkají jinak ne
-
+- Zařízení komunikují, pokud se jejich antény dotýkají jinak ne (vyřešeno, špatná frekvence)
 II. Informace získané ve škole (03.06.2021)
 -------------------------------------------
 ### Informace k projektu
@@ -112,6 +111,7 @@ IV. Konečný Harmonogram
 * 28.10.2021 - zprovoznění LoRa zařízení
 * 29.10.2021 - Snaha o komunikaci mezi zařízeními
 * 31.10.2021 - Zařízení mezi sebou komunikují 
+* 02.11.2021 - Vyřešena komunikace dvou žařízení pomocí LoRa
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 2. Sestavování
 
@@ -135,13 +135,16 @@ III. Komunikace mezi dvěmi LoRa zařízeními
 ------------------------------------------
 * Zařízení komunikují pomocí jednoduchých zpráv
 * Problém s tím, že nefunguje využití antény, zařízení komunikují jen, když se antény dotýkají
+* problém vyřešen, frekvence zařízení byla jiná, než je daná pro Evropu
+* Test zařízení: potvrení komunikace na zhruba 500-800m
+* použitá knihovna "heltec.h" -> kvůli Esp od firmy heltec
 
 Odkazy a použíté technologie:
 -------
 * Markdown - [wikipedie](https://cs.wikipedia.org/wiki/Markdown)
 * Micropython - [Micropython](https://randomnerdtutorials.com/micropython-esp32-esp8266-vs-code-pymakr/), [Instalace](https://blog.iservery.com/2020/04/06/instalace-micropython-a-vscode/)
 * esp32 debugger - [Debugger](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/jtag-debugging/using-debugger.html), [Github](https://github.com/maakbaas/esp8266-iot-framework)
-* esp32 LORA - https://www.ebay.com/itm/173624285281?var=472302684739&hash=item286cd05861:g:jAMAAOSwRW9chySA + gps modul
+* esp32 LORA - https://www.ebay.com/itm/173624285281 + gps modul https://www.ebay.com/itm/174930619300
 * NMEA - https://en.wikipedia.org/wiki/NMEA_2000
 * spiffs - https://randomnerdtutorials.com/esp32-vs-code-platformio-spiffs/
 * spiffs webserver - https://randomnerdtutorials.com/esp32-web-server-spiffs-spi-flash-file-system/
