@@ -2,7 +2,7 @@
 #include "Adafruit_GFX.h"
 #include "Adafruit_SSD1306.h"
 #include "Wire.h"
-#define PASMO 868E6
+#define PASMO 434E6 //pasmo pro Evropu
 #define OLED_RST 16
 #define OLED_SDA 4
 #define OLED_SCL 15
@@ -38,8 +38,8 @@ void loop() {
   display.setTextSize(2);
   display.setCursor(0,0);
 
-  display.print("Packet cislo: ");
-  display.print(pocet);
+  display.print("Packet:");
+  display.println(pocet);
   display.println("Odeslan");
   display.display();
 
@@ -47,7 +47,7 @@ void loop() {
   Serial.println(pocet);
 
   LoRa.beginPacket();
-  LoRa.print("Sender Packet ");
+  LoRa.print("Packet cislo: ");
   LoRa.print(pocet);
   LoRa.endPacket();
 
