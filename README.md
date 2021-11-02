@@ -115,7 +115,7 @@ IV. Konečný Harmonogram
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 2. Sestavování
 
-I. Zporvoznění Arduino IDE pro ESP32
+I. Zporvoznění Arduino IDE pro ESP32 (později PlatformIO)
 --------------------------------------
 * 30.09.2021 - Zprovoznění IDE, pro práci s esp32 a první test funkčnosti
 * Spuštění programu na vyhledání sítě, úspěšně splněno
@@ -131,8 +131,9 @@ II. Instalace PlatformioIDE + SPIFFS
 * 12.10.2021 - Snaha o spuštění webového serveru na esp32
 * 13.10.2021 - webserver funguje, vypis na obrazovku
 * <div class="row">
-  <img src="/images/spiff_webserver/IMG_20211012_222443.jpg" alt="LoRa_Sender" width="350"/>
-  <img src="/images/spiff_webserver/IMG_20211012_222452.jpg" alt="LoRa_Sender" width="350"/>
+  <img src="/images/spiff_webserver/IMG_20211012_222443.jpg" alt="LoRa_Sender" width="300"/>
+  <img src="/images/spiff_webserver/IMG_20211012_222452.jpg" alt="LoRa_Sender" width="300"/>
+  <img src="/images/spiff_webserver/site.JPG" alt="Stranka" width="300"/>
 </div>
 
 III. Komunikace mezi dvěmi LoRa zařízeními
