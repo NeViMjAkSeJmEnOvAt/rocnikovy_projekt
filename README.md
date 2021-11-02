@@ -133,7 +133,7 @@ II. Instalace PlatformioIDE + SPIFFS
 <div class="row">
   <img src="/images/spiff_webserver/IMG_20211012_222443.jpg" alt="LoRa_Sender" width="300"/>
   <img src="/images/spiff_webserver/IMG_20211012_222452.jpg" alt="LoRa_Sender" width="300"/>
-  <img src="/images/spiff_webserver/site.JPG" alt="Stranka" width="350"/>
+  <img src="/images/spiff_webserver/site.JPG" alt="Stranka" width="375"/>
 </div>
 
 III. Komunikace mezi dvěmi LoRa zařízeními
