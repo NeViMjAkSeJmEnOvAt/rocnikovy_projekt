@@ -138,7 +138,7 @@ III. Komunikace mezi dvěmi LoRa zařízeními
 * problém vyřešen, frekvence zařízení byla jiná, než je daná pro Evropu
 * Test zařízení: potvrení komunikace na zhruba 500-800m
 * použitá knihovna "heltec.h" -> kvůli Esp od firmy heltec
-![lora](../images/lora/IMG_20211102_220334.jpg)
+* ![lora](/images/lora/IMG_20211102_220334.jpg)
 
 Odkazy a použíté technologie:
 -------
