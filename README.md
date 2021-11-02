@@ -130,10 +130,10 @@ II. Instalace PlatformioIDE + SPIFFS
 * Zkouška instalace SPIFFS (Problém s instalací)
 * 12.10.2021 - Snaha o spuštění webového serveru na esp32
 * 13.10.2021 - webserver funguje, vypis na obrazovku
-* <div class="row">
+<div class="row">
   <img src="/images/spiff_webserver/IMG_20211012_222443.jpg" alt="LoRa_Sender" width="300"/>
   <img src="/images/spiff_webserver/IMG_20211012_222452.jpg" alt="LoRa_Sender" width="300"/>
-  <img src="/images/spiff_webserver/site.JPG" alt="Stranka" width="400"/>
+  <img src="/images/spiff_webserver/site.JPG" alt="Stranka" width="350"/>
 </div>
 
 III. Komunikace mezi dvěmi LoRa zařízeními
