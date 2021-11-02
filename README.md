@@ -132,8 +132,7 @@ II. Instalace PlatformioIDE + SPIFFS
 * 13.10.2021 - webserver funguje, vypis na obrazovku
 * <div class="row">
   <img src="/images/spiff_webserver/IMG_20211012_222443.jpg" alt="LoRa_Sender" width="350"/>
-  <img src="/images/spiff_webserver/IMG_20211012_222452.jpg.jpg" alt="LoRa_Sender" width="350"/>
-  <img src="/images/spiff_webserver/IMG_20211013_211154.jpg" alt="LoRa_Sender" width="350"/>
+  <img src="/images/spiff_webserver/IMG_20211012_222452.jpg" alt="LoRa_Sender" width="350"/>
 </div>
 
 III. Komunikace mezi dvěmi LoRa zařízeními
