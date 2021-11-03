@@ -1,4 +1,4 @@
-# Ročníkový projekt (Sledovací obojek pro psy) - část 1. Hrubý návrh
+# Ročníkový projekt (Sledovací obojek pro psy) - část 1. Návrh projektu
 
 I. Cíl projektu (03.06.2021)
 ----------------------------
@@ -114,6 +114,7 @@ IV. Konečný Harmonogram
 * 29.10.2021 - Snaha o komunikaci mezi zařízeními
 * 31.10.2021 - Zařízení mezi sebou komunikují 
 * 02.11.2021 - Vyřešena komunikace dvou žařízení pomocí LoRa (kominikace na +- 500-800m)
+* 03.11.2021 - úprava README.md -> především grafické úpravy
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 2. Sestavování
 
@@ -133,8 +134,8 @@ II. Instalace PlatformioIDE + SPIFFS
 * 12.10.2021 - Snaha o spuštění webového serveru na esp32
 * 13.10.2021 - webserver funguje, vypis na obrazovku
 <div class="row">
-  <img src="/images/spiff_webserver/IMG_20211012_222443.jpg" alt="LoRa_Sender" width="300"/>
-  <img src="/images/spiff_webserver/IMG_20211012_222452.jpg" alt="LoRa_Sender" width="300"/>
+  <img src="/images/spiff_webserver/IMG_20211012_222443.jpg" alt="LoRa_vypis" width="300"/>
+  <img src="/images/spiff_webserver/IMG_20211012_222452.jpg" alt="LoRa_vypis" width="300"/>
   <img src="/images/spiff_webserver/site.JPG" alt="Stranka" width="375"/>
 </div>
 
@@ -142,7 +143,7 @@ III. Komunikace mezi dvěmi LoRa zařízeními
 ------------------------------------------
 * Zařízení komunikují pomocí jednoduchých zpráv
 * Problém s tím, že nefunguje využití antény, zařízení komunikují jen, když se antény dotýkají
-* problém vyřešen, frekvence zařízení byla jiná, než je daná pro Evropu
+* problém vyřešen, frekvence zařízení byla jiná, než je daná pro Evropu (finální frekvence nyní 434MHz)
 * Test zařízení: potvrení komunikace na zhruba 500-800m
 * použitá knihovna "heltec.h" -> kvůli Esp od firmy heltec
 <div class="row">
