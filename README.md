@@ -113,7 +113,7 @@ IV. Konečný Harmonogram
 * 28.10.2021 - zprovoznění LoRa zařízení
 * 29.10.2021 - Snaha o komunikaci mezi zařízeními
 * 31.10.2021 - Zařízení mezi sebou komunikují 
-* 02.11.2021 - Vyřešena komunikace dvou žařízení pomocí LoRa
+* 02.11.2021 - Vyřešena komunikace dvou žařízení pomocí LoRa (kominikace na +- 500-800m)
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 2. Sestavování
 
@@ -149,6 +149,17 @@ III. Komunikace mezi dvěmi LoRa zařízeními
   <img src="/images/lora/IMG_20211102_220334.jpg" alt="LoRa_Sender" width="350"/>
   <img src="/images/lora/IMG_20211102_220342.jpg" alt="LoRa_Reciever" width="350"/>
 </div>
+
+IV. Zprovoznění GPS + posílání mezi LoRa zařízeními
+---------------------------------------------------
+
+V. Výpis informací na Webový server
+------------------------------------
+
+VI. Detaily + využití informací z LoRa zařízení
+---------------------------------------------------
+
+# Ročníkový projekt (Sledovací obojek pro psy) - část 3. Finální úpravy a debugování
 
 
 Odkazy a použíté technologie:
