@@ -7,15 +7,17 @@ I. Cíl projektu (03.06.2021)
 - Velikost sledovače by měla být maximálně velikosti mobilního telefonu (aby bylo možné jej umístit na jeho obojek, případně někde do kapsy)
 - Skládat by se měl ze dvou částí (sledovač, lokátor)
 - Sledovač - bude napájen baterií, krabička o menší velikosti, vysílá signál z místa na kterém se nachází
-- Lokátor - na displeji se bude zobrazovat: směr k pozici, vzádlenost, síla baterie, síla signálu
+- Lokátor - na displeji se bude zobrazovat: směr k pozici, vzádlenost, síla baterie, síla signálu (old)
+- Lokátor - bude dostávat signál pomocí LoRa zařízení, které pak bude zobrazovat na webovém serveru
 - esp32 LORA
 ### Problémy
 - Znovu se naučit jazyk na programování mikrokontrolerů (wiring)
 - Zjistit jaké technologie použít
 - Zjistit a nakoupit hardware (porovnat ceny Českých a zahraničních obchodů)
 - Vytvořit 3d model krabičky pro celý hardware (Late game) >> poté vytisknu na 3d tiskárně (Ender 3 V2)
-- LoRa Reciever nepřijímá Packety odeslané LoRa Senderem
+- LoRa Reciever nepřijímá Packety odeslané LoRa Senderem (vyřešeno)
 - Zařízení komunikují, pokud se jejich antény dotýkají jinak ne (vyřešeno, špatná frekvence)
+
 II. Informace získané ve škole (03.06.2021)
 -------------------------------------------
 ### Informace k projektu
@@ -72,17 +74,17 @@ III. Konkurence (16.06.2021)
 IV. Předpokládaný Harmonogram (15.09.2021)
 -------------------------------------------
 ### Září
-* Sepsat nutné zdroje
-* Objednat hardware
-* Zjistit všechny věci co budou potřeba
+* Sepsat nutné zdroje ✔️
+* Objednat hardware ✔️
+* Zjistit všechny věci co budou potřeba ✔️
 
 ### První polovina Říjnu
-* Seznámit se s technologiemi
-* Rozpracovat hardware
+* Seznámit se s technologiemi ✔️
+* Rozpracovat hardware ✔️
 
 ### Druhá polovina Říjnu
-* Začít psát kód
-* Sestavit hardware 
+* Začít psát kód ✔️
+* Sestavit hardware ❌
 
 ### První polovina Listopadu
 * Pomalu dokončovat kód
