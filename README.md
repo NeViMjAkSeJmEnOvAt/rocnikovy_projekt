@@ -1,4 +1,4 @@
-# Ročníkový projekt (Sledovací obojek pro psy) - část 1. Hrubý návrh
+# Ročníkový projekt (Sledovací obojek pro psy) - část 1. Návrh projektu
 
 I. Cíl projektu (03.06.2021)
 ----------------------------
@@ -7,15 +7,17 @@ I. Cíl projektu (03.06.2021)
 - Velikost sledovače by měla být maximálně velikosti mobilního telefonu (aby bylo možné jej umístit na jeho obojek, případně někde do kapsy)
 - Skládat by se měl ze dvou částí (sledovač, lokátor)
 - Sledovač - bude napájen baterií, krabička o menší velikosti, vysílá signál z místa na kterém se nachází
-- Lokátor - na displeji se bude zobrazovat: směr k pozici, vzádlenost, síla baterie, síla signálu
+- Lokátor - na displeji se bude zobrazovat: směr k pozici, vzádlenost, síla baterie, síla signálu (old)
+- Lokátor - bude dostávat signál pomocí LoRa zařízení, které pak bude zobrazovat na webovém serveru
 - esp32 LORA
 ### Problémy
 - Znovu se naučit jazyk na programování mikrokontrolerů (wiring)
 - Zjistit jaké technologie použít
 - Zjistit a nakoupit hardware (porovnat ceny Českých a zahraničních obchodů)
 - Vytvořit 3d model krabičky pro celý hardware (Late game) >> poté vytisknu na 3d tiskárně (Ender 3 V2)
-- LoRa Reciever nepřijímá Packety odeslané LoRa Senderem
+- LoRa Reciever nepřijímá Packety odeslané LoRa Senderem (vyřešeno)
 - Zařízení komunikují, pokud se jejich antény dotýkají jinak ne (vyřešeno, špatná frekvence)
+
 II. Informace získané ve škole (03.06.2021)
 -------------------------------------------
 ### Informace k projektu
@@ -72,17 +74,17 @@ III. Konkurence (16.06.2021)
 IV. Předpokládaný Harmonogram (15.09.2021)
 -------------------------------------------
 ### Září
-* Sepsat nutné zdroje
-* Objednat hardware
-* Zjistit všechny věci co budou potřeba
+* Sepsat nutné zdroje ✔️
+* Objednat hardware ✔️
+* Zjistit všechny věci co budou potřeba ✔️
 
 ### První polovina Říjnu
-* Seznámit se s technologiemi
-* Rozpracovat hardware
+* Seznámit se s technologiemi ✔️
+* Rozpracovat hardware ✔️
 
 ### Druhá polovina Říjnu
-* Začít psát kód
-* Sestavit hardware 
+* Začít psát kód ✔️
+* Sestavit hardware ❌
 
 ### První polovina Listopadu
 * Pomalu dokončovat kód
@@ -111,11 +113,12 @@ IV. Konečný Harmonogram
 * 28.10.2021 - zprovoznění LoRa zařízení
 * 29.10.2021 - Snaha o komunikaci mezi zařízeními
 * 31.10.2021 - Zařízení mezi sebou komunikují 
-* 02.11.2021 - Vyřešena komunikace dvou žařízení pomocí LoRa
+* 02.11.2021 - Vyřešena komunikace dvou žařízení pomocí LoRa (kominikace na +- 500-800m)
+* 03.11.2021 - úprava README.md -> především grafické úpravy
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 2. Sestavování
 
-I. Zporvoznění Arduino IDE pro ESP32
+I. Zporvoznění Arduino IDE pro ESP32 (později PlatformIO)
 --------------------------------------
 * 30.09.2021 - Zprovoznění IDE, pro práci s esp32 a první test funkčnosti
 * Spuštění programu na vyhledání sítě, úspěšně splněno
@@ -130,15 +133,35 @@ II. Instalace PlatformioIDE + SPIFFS
 * Zkouška instalace SPIFFS (Problém s instalací)
 * 12.10.2021 - Snaha o spuštění webového serveru na esp32
 * 13.10.2021 - webserver funguje, vypis na obrazovku
+<div class="row">
+  <img src="/images/spiff_webserver/IMG_20211012_222443.jpg" alt="LoRa_vypis" width="300"/>
+  <img src="/images/spiff_webserver/IMG_20211012_222452.jpg" alt="LoRa_vypis" width="300"/>
+  <img src="/images/spiff_webserver/site.JPG" alt="Stranka" width="375"/>
+</div>
 
 III. Komunikace mezi dvěmi LoRa zařízeními
 ------------------------------------------
 * Zařízení komunikují pomocí jednoduchých zpráv
 * Problém s tím, že nefunguje využití antény, zařízení komunikují jen, když se antény dotýkají
-* problém vyřešen, frekvence zařízení byla jiná, než je daná pro Evropu
+* problém vyřešen, frekvence zařízení byla jiná, než je daná pro Evropu (finální frekvence nyní 434MHz)
 * Test zařízení: potvrení komunikace na zhruba 500-800m
 * použitá knihovna "heltec.h" -> kvůli Esp od firmy heltec
-![lora](./images/spiff webserver/lora/IMG_20211102_220334.jpg)
+<div class="row">
+  <img src="/images/lora/IMG_20211102_220334.jpg" alt="LoRa_Sender" width="350"/>
+  <img src="/images/lora/IMG_20211102_220342.jpg" alt="LoRa_Reciever" width="350"/>
+</div>
+
+IV. Zprovoznění GPS + posílání mezi LoRa zařízeními
+---------------------------------------------------
+
+V. Výpis informací na Webový server
+------------------------------------
+
+VI. Detaily + využití informací z LoRa zařízení
+---------------------------------------------------
+
+# Ročníkový projekt (Sledovací obojek pro psy) - část 3. Finální úpravy a debugování
+
 
 Odkazy a použíté technologie:
 -------
@@ -151,6 +174,7 @@ Odkazy a použíté technologie:
 * spiffs webserver - https://randomnerdtutorials.com/esp32-web-server-spiffs-spi-flash-file-system/
 * LoRa komunikace - https://github.com/HelTecAutomation/Heltec_ESP32/tree/master/examples/LoRa
 * LoRa komunikace 2 - https://randomnerdtutorials.com/esp32-lora-rfm95-transceiver-arduino-ide/
+* Heltec knihovna-priklady - https://github.com/HelTecAutomation/Heltec_ESP32/tree/master/examples/LoRa
 
 
 
