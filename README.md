@@ -116,6 +116,7 @@ IV. Konečný Harmonogram
 * 31.10.2021 - Zařízení mezi sebou komunikují 
 * 02.11.2021 - Vyřešena komunikace dvou žařízení pomocí LoRa (kominikace na +- 500-800m)
 * 03.11.2021 - úprava README.md -> především grafické úpravy
+* 04.11.2021 - pokus dostat GPS signál
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 2. Sestavování
 
