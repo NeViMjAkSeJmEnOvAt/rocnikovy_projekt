@@ -12,8 +12,8 @@
 #define SCREEN_WIDTH 128 
 #define SCREEN_HEIGHT 64
 
-const char* ssid = "MK 2.4GHz"; //nazev wifi, na kterou se zařízení připojí
-const char* password = "MK12345678"; //heslo k wifi
+const char* ssid = "Čau"; //nazev wifi, na kterou se zařízení připojí
+const char* password = "zabijse1"; //heslo k wifi
 int promenna = 0;
 int VypisCislo;
 int PIN1 = 3;
