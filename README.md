@@ -17,6 +17,7 @@ I. Cíl projektu (03.06.2021)
 - Vytvořit 3d model krabičky pro celý hardware (Late game) >> poté vytisknu na 3d tiskárně (Ender 3 V2)
 - LoRa Reciever nepřijímá Packety odeslané LoRa Senderem (vyřešeno)
 - Zařízení komunikují, pokud se jejich antény dotýkají jinak ne (vyřešeno, špatná frekvence)
+- GPS nechce přijímat data, problém může být v tom, že tam chybí anténa
 
 II. Informace získané ve škole (03.06.2021)
 -------------------------------------------
