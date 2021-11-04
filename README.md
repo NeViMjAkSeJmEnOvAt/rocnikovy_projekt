@@ -175,6 +175,11 @@ Odkazy a použíté technologie:
 * LoRa komunikace - https://github.com/HelTecAutomation/Heltec_ESP32/tree/master/examples/LoRa
 * LoRa komunikace 2 - https://randomnerdtutorials.com/esp32-lora-rfm95-transceiver-arduino-ide/
 * Heltec knihovna-priklady - https://github.com/HelTecAutomation/Heltec_ESP32/tree/master/examples/LoRa
+* NMEA - https://github.com/stevemarple/MicroNMEA
+* GPS data - https://ww2.mathworks.cn/help/supportpkg/arduino/ref/read-serial-data-from-a-gps-shield-using-arduino-hardware.html
+* GPS - https://github.com/Heltec-Aaron-Lee/WiFi_Kit_series/issues/116
+* GPS2 - https://learn.adafruit.com/adafruit-ultimate-gps/arduino-wiring
+* parsovani dat GPS - https://learn.adafruit.com/adafruit-ultimate-gps/parsed-data-output
 
 
 
