@@ -18,6 +18,7 @@ I. Cíl projektu (03.06.2021)
 - LoRa Reciever nepřijímá Packety odeslané LoRa Senderem (vyřešeno)
 - Zařízení komunikují, pokud se jejich antény dotýkají jinak ne (vyřešeno, špatná frekvence)
 - GPS nechce přijímat data, problém může být v tom, že tam chybí anténa
+- Anténa nainstalována, gps stále předává divné informace
 
 II. Informace získané ve škole (03.06.2021)
 -------------------------------------------
