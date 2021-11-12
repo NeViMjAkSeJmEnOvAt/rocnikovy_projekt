@@ -87,15 +87,16 @@ IV. Předpokládaný Harmonogram (15.09.2021)
 ### Druhá polovina Říjnu
 * Začít psát kód ✔️
 * Sestavit hardware ❌
+* Udělat jednotlivé části kódu ✔️
 
 ### První polovina Listopadu
-* Pomalu dokončovat kód
+* Pomalu dokončovat kód - sestavit kód
 * Debugování a chyby
-* Udělat návrh obalu 
 
 ### Druhá polovina Listopadu
 * Finální úpravy
 * Zbytek času na to, pokud něco nebudu stíhat
+* Udělat návrh obalu 
 * Vytisknout obal na 3d tiskárně
 
 ### První polovina Prosince (Termín 10.12.2021)
@@ -118,6 +119,7 @@ IV. Konečný Harmonogram
 * 02.11.2021 - Vyřešena komunikace dvou žařízení pomocí LoRa (kominikace na +- 500-800m)
 * 03.11.2021 - úprava README.md -> především grafické úpravy
 * 04.11.2021 - pokus dostat GPS signál
+* 12.11.2021 - změna gps modulu > funguje, dostávám informace z gps, ale nejsou tak přesné jak bych předpokládal
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 2. Sestavování
 
@@ -156,6 +158,11 @@ III. Komunikace mezi dvěmi LoRa zařízeními
 
 IV. Zprovoznění GPS + posílání mezi LoRa zařízeními
 ---------------------------------------------------
+* Zprovoznění GPS zařízení pomocí Adafruit_GPS knihovny
+* Zařízení dostává všechny informace, co potřebuju
+* <div class="row">
+  <img src="/images/gps/test1.PNG" alt="GPS_output" width="350"/>
+</div>
 
 V. Výpis informací na Webový server
 ------------------------------------
