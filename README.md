@@ -17,6 +17,8 @@ I. Cíl projektu (03.06.2021)
 - Vytvořit 3d model krabičky pro celý hardware (Late game) >> poté vytisknu na 3d tiskárně (Ender 3 V2)
 - LoRa Reciever nepřijímá Packety odeslané LoRa Senderem (vyřešeno)
 - Zařízení komunikují, pokud se jejich antény dotýkají jinak ne (vyřešeno, špatná frekvence)
+- GPS nechce přijímat data, problém může být v tom, že tam chybí anténa
+- Anténa nainstalována, gps stále předává divné informace
 
 II. Informace získané ve škole (03.06.2021)
 -------------------------------------------
@@ -115,6 +117,7 @@ IV. Konečný Harmonogram
 * 31.10.2021 - Zařízení mezi sebou komunikují 
 * 02.11.2021 - Vyřešena komunikace dvou žařízení pomocí LoRa (kominikace na +- 500-800m)
 * 03.11.2021 - úprava README.md -> především grafické úpravy
+* 04.11.2021 - pokus dostat GPS signál
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 2. Sestavování
 
@@ -175,6 +178,11 @@ Odkazy a použíté technologie:
 * LoRa komunikace - https://github.com/HelTecAutomation/Heltec_ESP32/tree/master/examples/LoRa
 * LoRa komunikace 2 - https://randomnerdtutorials.com/esp32-lora-rfm95-transceiver-arduino-ide/
 * Heltec knihovna-priklady - https://github.com/HelTecAutomation/Heltec_ESP32/tree/master/examples/LoRa
+* NMEA - https://github.com/stevemarple/MicroNMEA
+* GPS data - https://ww2.mathworks.cn/help/supportpkg/arduino/ref/read-serial-data-from-a-gps-shield-using-arduino-hardware.html
+* GPS - https://github.com/Heltec-Aaron-Lee/WiFi_Kit_series/issues/116
+* GPS2 - https://learn.adafruit.com/adafruit-ultimate-gps/arduino-wiring
+* parsovani dat GPS - https://learn.adafruit.com/adafruit-ultimate-gps/parsed-data-output
 
 
 
