@@ -160,8 +160,8 @@ IV. Zprovoznění GPS + posílání mezi LoRa zařízeními
 ---------------------------------------------------
 * Zprovoznění GPS zařízení pomocí Adafruit_GPS knihovny
 * Zařízení dostává všechny informace, co potřebuju
-* <div class="row">
-  <img src="/images/gps/test1.PNG" alt="GPS_output" width="350"/>
+<div class="row">
+  <img src="/images/gps/gps2.jpg" alt="GPS_output" width="350"/>
 </div>
 
 V. Výpis informací na Webový server
