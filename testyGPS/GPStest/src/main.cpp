@@ -1,6 +1,6 @@
 #include <Adafruit_GPS.h>
 #define GPSSerial Serial2
-Adafruit_GPS GPS(&GPSSerial);
+Adafruit_GPS GPS(&GPSSerial); //RX 17 TX 16
 #define GPSECHO  true
 
 void setup()
