@@ -193,7 +193,9 @@ Odkazy a použíté technologie:
 * GPS data - https://ww2.mathworks.cn/help/supportpkg/arduino/ref/read-serial-data-from-a-gps-shield-using-arduino-hardware.html
 * GPS - https://github.com/Heltec-Aaron-Lee/WiFi_Kit_series/issues/116
 * GPS2 - https://learn.adafruit.com/adafruit-ultimate-gps/arduino-wiring
+* GPS3 - https://randomnerdtutorials.com/guide-to-neo-6m-gps-module-with-arduino/
 * parsovani dat GPS - https://learn.adafruit.com/adafruit-ultimate-gps/parsed-data-output
+* náhodné YT video - https://www.davidjwatts.com/youtube/GPS-software-serial.ino
 
 
 
