@@ -92,18 +92,18 @@ IV. Předpokládaný Harmonogram (15.09.2021)
 * Udělat jednotlivé části kódu ✔️
 
 ### První polovina Listopadu
-* Pomalu dokončovat kód - sestavit kód ❌
+* Pomalu dokončovat Hardware kód - sestavit kód ✔️
 * Debugování a chyby ❌
 
 ### Druhá polovina Listopadu
-* Finální úpravy
-* Zbytek času na to, pokud něco nebudu stíhat
-* Udělat návrh obalu 
-* Vytisknout obal na 3d tiskárně
+* Finální úpravy ❌
+* Zbytek času na to, pokud něco nebudu stíhat ❌
+* Udělat návrh obalu ❌
+* Vytisknout obal na 3d tiskárně ❌
 
 ### První polovina Prosince (Termín 10.12.2021)
-* Sepsat dokumentaci
-* Poslední testy
+* Sepsat dokumentaci ❌
+* Poslední testy ❌
 
 IV. Konečný Harmonogram 
 -------------------------------------------
