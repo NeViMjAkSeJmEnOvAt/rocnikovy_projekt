@@ -17,10 +17,11 @@ I. Cíl projektu (03.06.2021)
 - Vytvořit 3d model krabičky pro celý hardware (Late game) >> poté vytisknu na 3d tiskárně (Ender 3 V2)
 - LoRa Reciever nepřijímá Packety odeslané LoRa Senderem (vyřešeno)
 - Zařízení komunikují, pokud se jejich antény dotýkají jinak ne (vyřešeno, špatná frekvence)
-- GPS nechce přijímat data, problém může být v tom, že tam chybí anténa
+- GPS nechce přijímat data, problém může být v tom, že tam chybí anténa (do teď nevím co je za problém)
 - Anténa nainstalována, gps stále předává divné informace (změnil jsem celou gps)
-- Doma nechytám dobrý gps signál
-- GPS má hroznou odchylku (1-10km)
+- Doma nechytám dobrý gps signál (s tím nic moc nenadělám :D, nastavil sem že pokud nechytá signál, pošle předem dannou proměnnou)
+- GPS má hroznou odchylku (1-10km) (opraveno - gps neodesilalo cele souradnice, jenom část)
+- Spiffs webserver nechce fungovat
 
 II. Informace získané ve škole (03.06.2021)
 -------------------------------------------
@@ -123,6 +124,7 @@ IV. Konečný Harmonogram
 * 04.11.2021 - pokus dostat GPS signál
 * 12.11.2021 - změna gps modulu > funguje, dostávám informace z gps, ale nejsou tak přesné jak bych předpokládal
 * 15.11.2021 - gps sender by měl být skoro hotový, problém s gps odchylkou
+* 16.11.2021 - skládání recieveru + zprovozňování webového serveru
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 2. Sestavování
 
