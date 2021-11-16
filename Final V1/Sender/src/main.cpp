@@ -51,7 +51,7 @@ void loop()
 {
   display.setTextColor(WHITE);
   display.setTextSize(2);
-  for (x; x < CAS; x++)
+  /*for (x; x < CAS; x++)
   {
     display.clearDisplay();
     display.setCursor(0, 0);
@@ -74,38 +74,7 @@ void loop()
     display.println("GPS / LoRa");
     display.display();
     delay(500);
-  }
-  /*do
-    {
-      display.clearDisplay();
-      display.setCursor(0, 0);
-      display.setTextSize(1);
-      display.println("Ziskavani GPS.");
-      display.setCursor(0, 20);
-      display.display();
-      delay(500);
-      display.clearDisplay();
-      display.setCursor(0, 0);
-      display.setTextSize(1);
-      display.println("Ziskavani GPS..");
-      display.setCursor(0, 20);
-      display.display();
-      delay(500);
-      display.clearDisplay();
-      display.setCursor(0, 0);
-      display.setTextSize(1);
-      display.println("Ziskavani GPS...");
-      display.setCursor(0, 20);
-      display.display();
-      delay(500);
-      display.clearDisplay();
-      display.setCursor(0, 0);
-      display.setTextSize(1);
-      display.println("Ziskavani GPS....");
-      display.setCursor(0, 20);
-      display.display();
-      delay(500);      
-    } while (); */
+  }*/
   GPS.read();
   if (GPS.newNMEAreceived())
   {
@@ -127,22 +96,25 @@ void loop()
     display.print(GPS.seconds);
     display.setCursor(0, 20);
     ////////////////vypis souradnic/////////////////////
-    display.println("-- Aktualni pozice --");
-    display.print(GPS.latitude);
-    display.print(GPS.lat);
+    display.println("-Aktualni GPS pozice-");
+    display.print(GPS.latitude_fixed);
     display.println(" Z. Sirky");
-    display.print(GPS.longitude);
-    display.print(GPS.lon);
+    display.print(GPS.longitude_fixed);
     display.println(" Z. Delky");
     display.display();
     Serial.println(GPS.satellites);
     //////////////odeslani informaci///////////////////////////
     LoRa.beginPacket();
-    LoRa.print(GPS.latitude);
-    LoRa.println(GPS.lat);
-    LoRa.print(GPS.longitude);
-    LoRa.print(GPS.lon);
+    LoRa.print(GPS.latitude_fixed);
+    LoRa.print(GPS.longitude_fixed);
     LoRa.endPacket();
   }
+  else{
+    LoRa.beginPacket();
+    LoRa.print("50.0933888");
+    LoRa.print("17.5258640");
+    LoRa.endPacket();
+  }
+  delay(500);
   Serial.println(GPS.satellites);
 }

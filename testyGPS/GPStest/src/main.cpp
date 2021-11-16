@@ -28,10 +28,10 @@ void loop(){
       Serial.print("Lognitude: ");
       Serial.print(GPS.longitude);
       Serial.println(GPS.lon);
-
-      
-      
+      Serial.print("Latitude2: ");
+      Serial.println(GPS.latitude_fixed);
+      Serial.print("Lognitude2: ");
+      Serial.println(GPS.longitude_fixed);
   }
-  
   delay(100);
 }
