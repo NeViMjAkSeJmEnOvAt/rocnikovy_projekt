@@ -21,7 +21,7 @@ I. Cíl projektu (03.06.2021)
 - Anténa nainstalována, gps stále předává divné informace (změnil jsem celou gps)
 - Doma nechytám dobrý gps signál (s tím nic moc nenadělám :D, nastavil sem že pokud nechytá signál, pošle předem dannou proměnnou) - opraveno
 - GPS má hroznou odchylku (1-10km) (opraveno - gps neodesilalo cele souradnice, jenom část)
-- Spiffs webserver nechce fungovat
+- Spiffs webserver nechce fungovat, funguje pouze samostatný 
 - Sender nefunguje, když je zapnutá jak GPS tak OLED display (napadá mě buď nedostatečný proud, nebo překrývání portů - budu to ignorovat, display není potřeba)
 
 II. Informace získané ve škole (03.06.2021)
@@ -126,6 +126,7 @@ IV. Konečný Harmonogram
 * 12.11.2021 - změna gps modulu > funguje, dostávám informace z gps, ale nejsou tak přesné jak bych předpokládal
 * 15.11.2021 - gps sender by měl být skoro hotový, problém s gps odchylkou
 * 16.11.2021 - skládání recieveru + zprovozňování webového serveru
+* 18.11.2021 - Zprovoznění GPS + komunikace mezi LoRa zařízeními, drobné úpravy kódu
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 2. Sestavování
 
