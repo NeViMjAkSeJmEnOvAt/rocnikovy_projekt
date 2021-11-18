@@ -192,13 +192,13 @@ Odkazy a použíté technologie:
 * LoRa komunikace 2 - https://randomnerdtutorials.com/esp32-lora-rfm95-transceiver-arduino-ide/
 * Heltec knihovna-priklady - https://github.com/HelTecAutomation/Heltec_ESP32/tree/master/examples/LoRa
 * NMEA - https://github.com/stevemarple/MicroNMEA
-* GPS data - https://ww2.mathworks.cn/help/supportpkg/arduino/ref/read-serial-data-from-a-gps-shield-using-arduino-hardware.html
-* GPS - https://github.com/Heltec-Aaron-Lee/WiFi_Kit_series/issues/116
-* GPS2 - https://learn.adafruit.com/adafruit-ultimate-gps/arduino-wiring
-* GPS3 - https://randomnerdtutorials.com/guide-to-neo-6m-gps-module-with-arduino/
+* GPS data - https://ww2.mathworks.cn/help/supportpkg/arduino/ref/read-serial-data-from-a-gps-shield-using-arduino-hardware.html //nakonec použitý jiný program
+* GPS - https://github.com/Heltec-Aaron-Lee/WiFi_Kit_series/issues/116 //nakonec použitý jiný program
+* GPS2 - https://learn.adafruit.com/adafruit-ultimate-gps/arduino-wiring //nakonec použitý jiný program
+* GPS3 - https://randomnerdtutorials.com/guide-to-neo-6m-gps-module-with-arduino/ //nakonec použitý jiný program
 * parsovani dat GPS - https://learn.adafruit.com/adafruit-ultimate-gps/parsed-data-output
 * náhodné YT video - https://www.davidjwatts.com/youtube/GPS-software-serial.ino
-* Tiny GPS kód - https://github.com/DzikuVx/esp32_gps_thingy/blob/master/gps_logger.ino
+* Tiny GPS kód - https://github.com/DzikuVx/esp32_gps_thingy/blob/master/gps_logger.ino //naprosty hrdina tento člověk !!!! ❤️❤️❤️
 
 
 
