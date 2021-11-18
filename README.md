@@ -198,6 +198,7 @@ Odkazy a použíté technologie:
 * GPS3 - https://randomnerdtutorials.com/guide-to-neo-6m-gps-module-with-arduino/
 * parsovani dat GPS - https://learn.adafruit.com/adafruit-ultimate-gps/parsed-data-output
 * náhodné YT video - https://www.davidjwatts.com/youtube/GPS-software-serial.ino
+* Tiny GPS kód - https://github.com/DzikuVx/esp32_gps_thingy/blob/master/gps_logger.ino
 
 
 
