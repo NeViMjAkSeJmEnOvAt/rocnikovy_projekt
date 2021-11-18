@@ -170,6 +170,8 @@ IV. Zprovoznění GPS + posílání mezi LoRa zařízeními
 <div class="row">
   <img src="/images/gps/gps2.jpg" alt="GPS_output" width="350"/>
 </div>
+* změna knihovny na TinyGps++.h > lepší funkce, jednoduchost
+* GPS úspěsně vypisuje celé sořadnice a aktualizuje se při jakémkoliv pohybu
 
 V. Výpis informací na Webový server
 ------------------------------------
