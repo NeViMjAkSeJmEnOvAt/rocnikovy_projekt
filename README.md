@@ -19,9 +19,10 @@ I. Cíl projektu (03.06.2021)
 - Zařízení komunikují, pokud se jejich antény dotýkají jinak ne (vyřešeno, špatná frekvence)
 - GPS nechce přijímat data, problém může být v tom, že tam chybí anténa (do teď nevím co je za problém)
 - Anténa nainstalována, gps stále předává divné informace (změnil jsem celou gps)
-- Doma nechytám dobrý gps signál (s tím nic moc nenadělám :D, nastavil sem že pokud nechytá signál, pošle předem dannou proměnnou)
+- Doma nechytám dobrý gps signál (s tím nic moc nenadělám :D, nastavil sem že pokud nechytá signál, pošle předem dannou proměnnou) - opraveno
 - GPS má hroznou odchylku (1-10km) (opraveno - gps neodesilalo cele souradnice, jenom část)
 - Spiffs webserver nechce fungovat
+- Sender nefunguje, když je zapnutá jak GPS tak OLED display (napadá mě buď nedostatečný proud, nebo překrývání portů - budu to ignorovat, display není potřeba)
 
 II. Informace získané ve škole (03.06.2021)
 -------------------------------------------
