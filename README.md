@@ -36,6 +36,7 @@ II. Informace získané ve škole (03.06.2021)
 - framework
 - SPIFFS
 - OTA update
+- nepoužívat delay
 ### Hodnocení projektu (16.06.2021)
 - projekt samotný - __40%__
 - dokumentace - __20%__ (všechny informace o projektu, problémy, časové rozvržení, časová náročnost..)
