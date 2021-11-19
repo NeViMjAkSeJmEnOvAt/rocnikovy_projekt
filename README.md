@@ -203,6 +203,7 @@ Odkazy a použíté technologie:
 * parsovani dat GPS - https://learn.adafruit.com/adafruit-ultimate-gps/parsed-data-output
 * náhodné YT video - https://www.davidjwatts.com/youtube/GPS-software-serial.ino
 * Tiny GPS kód - https://github.com/DzikuVx/esp32_gps_thingy/blob/master/gps_logger.ino //naprosty hrdina tento člověk !!!! ❤️❤️❤️
+* rtos vtasks - https://www.youtube.com/watch?v=95yUbClyf3E
 
 
 
