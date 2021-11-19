@@ -195,6 +195,7 @@ Odkazy a použíté technologie:
 * spiffs webserver - https://randomnerdtutorials.com/esp32-web-server-spiffs-spi-flash-file-system/
 * LoRa komunikace - https://github.com/HelTecAutomation/Heltec_ESP32/tree/master/examples/LoRa
 * LoRa komunikace 2 - https://randomnerdtutorials.com/esp32-lora-rfm95-transceiver-arduino-ide/
+* LoRa prikazy - https://github.com/sandeepmistry/arduino-LoRa/blob/master/API.md
 * Heltec knihovna-priklady - https://github.com/HelTecAutomation/Heltec_ESP32/tree/master/examples/LoRa
 * NMEA - https://github.com/stevemarple/MicroNMEA
 * GPS data - https://ww2.mathworks.cn/help/supportpkg/arduino/ref/read-serial-data-from-a-gps-shield-using-arduino-hardware.html //nakonec použitý jiný program
