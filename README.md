@@ -128,6 +128,7 @@ IV. Konečný Harmonogram
 * 15.11.2021 - gps sender by měl být skoro hotový, problém s gps odchylkou
 * 16.11.2021 - skládání recieveru + zprovozňování webového serveru
 * 18.11.2021 - Zprovoznění GPS + komunikace mezi LoRa zařízeními, drobné úpravy kódu
+* 20.11.2021 - Komunikace funguje, webserver funguje a dostává informace
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 2. Sestavování
 
@@ -174,6 +175,7 @@ IV. Zprovoznění GPS + posílání mezi LoRa zařízeními
 </div>
 * změna knihovny na TinyGps++.h > lepší funkce, jednoduchost
 * GPS úspěsně vypisuje celé sořadnice a aktualizuje se při jakémkoliv pohybu
+* LoRa posílá informace mezi sebou a ukazuje je na webserveru
 
 V. Výpis informací na Webový server
 ------------------------------------
