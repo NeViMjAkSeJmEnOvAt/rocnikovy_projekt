@@ -17,10 +17,12 @@ I. Cíl projektu (03.06.2021)
 - Vytvořit 3d model krabičky pro celý hardware (Late game) >> poté vytisknu na 3d tiskárně (Ender 3 V2)
 - LoRa Reciever nepřijímá Packety odeslané LoRa Senderem (vyřešeno)
 - Zařízení komunikují, pokud se jejich antény dotýkají jinak ne (vyřešeno, špatná frekvence)
-- GPS nechce přijímat data, problém může být v tom, že tam chybí anténa
+- GPS nechce přijímat data, problém může být v tom, že tam chybí anténa (do teď nevím co je za problém)
 - Anténa nainstalována, gps stále předává divné informace (změnil jsem celou gps)
-- Doma nechytám dobrý gps signál
-- GPS má hroznou odchylku (1-10km)
+- Doma nechytám dobrý gps signál (s tím nic moc nenadělám :D, nastavil sem že pokud nechytá signál, pošle předem dannou proměnnou) - opraveno
+- GPS má hroznou odchylku (1-10km) (opraveno - gps neodesilalo cele souradnice, jenom část)
+- Spiffs webserver nechce fungovat, funguje pouze samostatný 
+- Sender nefunguje, když je zapnutá jak GPS tak OLED display (napadá mě buď nedostatečný proud, nebo překrývání portů - budu to ignorovat, display není potřeba)
 
 II. Informace získané ve škole (03.06.2021)
 -------------------------------------------
@@ -34,6 +36,7 @@ II. Informace získané ve škole (03.06.2021)
 - framework
 - SPIFFS
 - OTA update
+- nepoužívat delay
 ### Hodnocení projektu (16.06.2021)
 - projekt samotný - __40%__
 - dokumentace - __20%__ (všechny informace o projektu, problémy, časové rozvržení, časová náročnost..)
@@ -123,6 +126,8 @@ IV. Konečný Harmonogram
 * 04.11.2021 - pokus dostat GPS signál
 * 12.11.2021 - změna gps modulu > funguje, dostávám informace z gps, ale nejsou tak přesné jak bych předpokládal
 * 15.11.2021 - gps sender by měl být skoro hotový, problém s gps odchylkou
+* 16.11.2021 - skládání recieveru + zprovozňování webového serveru
+* 18.11.2021 - Zprovoznění GPS + komunikace mezi LoRa zařízeními, drobné úpravy kódu
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 2. Sestavování
 
@@ -167,6 +172,8 @@ IV. Zprovoznění GPS + posílání mezi LoRa zařízeními
 <div class="row">
   <img src="/images/gps/gps2.jpg" alt="GPS_output" width="350"/>
 </div>
+* změna knihovny na TinyGps++.h > lepší funkce, jednoduchost
+* GPS úspěsně vypisuje celé sořadnice a aktualizuje se při jakémkoliv pohybu
 
 V. Výpis informací na Webový server
 ------------------------------------
@@ -188,14 +195,17 @@ Odkazy a použíté technologie:
 * spiffs webserver - https://randomnerdtutorials.com/esp32-web-server-spiffs-spi-flash-file-system/
 * LoRa komunikace - https://github.com/HelTecAutomation/Heltec_ESP32/tree/master/examples/LoRa
 * LoRa komunikace 2 - https://randomnerdtutorials.com/esp32-lora-rfm95-transceiver-arduino-ide/
+* LoRa prikazy - https://github.com/sandeepmistry/arduino-LoRa/blob/master/API.md
 * Heltec knihovna-priklady - https://github.com/HelTecAutomation/Heltec_ESP32/tree/master/examples/LoRa
 * NMEA - https://github.com/stevemarple/MicroNMEA
-* GPS data - https://ww2.mathworks.cn/help/supportpkg/arduino/ref/read-serial-data-from-a-gps-shield-using-arduino-hardware.html
-* GPS - https://github.com/Heltec-Aaron-Lee/WiFi_Kit_series/issues/116
-* GPS2 - https://learn.adafruit.com/adafruit-ultimate-gps/arduino-wiring
-* GPS3 - https://randomnerdtutorials.com/guide-to-neo-6m-gps-module-with-arduino/
+* GPS data - https://ww2.mathworks.cn/help/supportpkg/arduino/ref/read-serial-data-from-a-gps-shield-using-arduino-hardware.html //nakonec použitý jiný program
+* GPS - https://github.com/Heltec-Aaron-Lee/WiFi_Kit_series/issues/116 //nakonec použitý jiný program
+* GPS2 - https://learn.adafruit.com/adafruit-ultimate-gps/arduino-wiring //nakonec použitý jiný program
+* GPS3 - https://randomnerdtutorials.com/guide-to-neo-6m-gps-module-with-arduino/ //nakonec použitý jiný program
 * parsovani dat GPS - https://learn.adafruit.com/adafruit-ultimate-gps/parsed-data-output
 * náhodné YT video - https://www.davidjwatts.com/youtube/GPS-software-serial.ino
+* Tiny GPS kód - https://github.com/DzikuVx/esp32_gps_thingy/blob/master/gps_logger.ino //naprosty hrdina tento člověk !!!! ❤️❤️❤️
+* rtos vtasks - https://www.youtube.com/watch?v=95yUbClyf3E
 
 
 
