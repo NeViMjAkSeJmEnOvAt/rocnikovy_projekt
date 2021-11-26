@@ -129,6 +129,7 @@ IV. Konečný Harmonogram
 * 16.11.2021 - skládání recieveru + zprovozňování webového serveru
 * 18.11.2021 - Zprovoznění GPS + komunikace mezi LoRa zařízeními, drobné úpravy kódu
 * 20.11.2021 - Komunikace funguje, webserver funguje a dostává informace
+* 26.11.2021 - Práce na Stránce + zobrazení mapy 
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 2. Sestavování
 
@@ -179,6 +180,8 @@ IV. Zprovoznění GPS + posílání mezi LoRa zařízeními
 
 V. Výpis informací na Webový server
 ------------------------------------
+* Informace z gps se rozparsují a posílají na webový server
+* Stránka se každých 10s refresne
 
 VI. Detaily + využití informací z LoRa zařízení
 ---------------------------------------------------
