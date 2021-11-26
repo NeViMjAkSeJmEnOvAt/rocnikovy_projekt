@@ -27,8 +27,19 @@ void loop()
   Serial.println(gps.altitude.meters());
 
   LoRa.beginPacket();
-  LoRa.println(gps.location.lng(), 7);
-  LoRa.println(gps.location.lat(), 7);
+  LoRa.print(gps.location.lng(), 7);
+  LoRa.print(gps.location.lat(), 7);
+  LoRa.print(gps.altitude.meters());
+  LoRa.print(gps.time.hour());
+  LoRa.print(":");
+  LoRa.print(gps.time.minute());
+  LoRa.print(":");
+  LoRa.print(gps.time.second());
+  LoRa.print(gps.date.day());
+  LoRa.print(".");
+  LoRa.print(gps.date.month());
+  LoRa.print(".");
+  LoRa.println(gps.date.year());
   LoRa.endPacket();
   delay(500);
 }

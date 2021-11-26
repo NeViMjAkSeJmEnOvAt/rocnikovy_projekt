@@ -16,8 +16,8 @@
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
 
-const char *ssid = "DELL inspiron 157000"; //nazev wifi, na kterou se zařízení připojí
-const char *password = "zabijse1";         //heslo k wifi
+const char *ssid = "MK 2.4GHz"; //nazev wifi, na kterou se zařízení připojí
+const char *password = "MK12345678";         //heslo k wifi
 char VyslednyText[2];
 String VypisovanyText;
 String VypisovanyText2;
@@ -25,18 +25,57 @@ String VypisovanyText2;
 AsyncWebServer server(80);
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RST);
 
+String parser(String gps, int x)
+{
+  switch (x)
+  {
+  case 1: //longitude
+    return (gps.substring(0, 10));
+    break;
+  case 2: //latitude
+    return (gps.substring(10, 20));
+    break;
+  case 3: //altitude
+    return (gps.substring(20, 26));
+    break;
+  case 4: //cas
+    return (gps.substring(26, 34));
+    break;
+  case 5: //datum
+    return (gps.substring(34, 44));
+    break;
+  }
+}
+
 String processor(const String &var)
 {
   Serial.println(var);
-  if (var == "GPS")
+  if (var == "GPS_LON")
   { //pokud se webserver zeptá na identifikátor GPS, bude mu poslán VyslednyText
-    Serial.println(VypisovanyText2);
-    return String(VypisovanyText2);
+    Serial.println(parser(VypisovanyText2, 1));
+    return (parser(VypisovanyText2, 1));
+  }
+  else if (var == "GPS_LAT")
+  { //pokud se webserver zeptá na identifikátor GPS, bude mu poslán VyslednyText
+    Serial.println(parser(VypisovanyText2, 2));
+    return (parser(VypisovanyText2, 2));
+  }
+  else if (var == "GPS_ALT")
+  { //pokud se webserver zeptá na identifikátor GPS, bude mu poslán VyslednyText
+    Serial.println(parser(VypisovanyText2, 3));
+    return (parser(VypisovanyText2, 3));
+  }
+  else if (var == "GPS_TIME")
+  { //pokud se webserver zeptá na identifikátor GPS, bude mu poslán VyslednyText
+    Serial.println(parser(VypisovanyText2, 4));
+    return (parser(VypisovanyText2, 4));
+  }
+  else if (var == "GPS_DATE")
+  { //pokud se webserver zeptá na identifikátor GPS, bude mu poslán VyslednyText
+    Serial.println(parser(VypisovanyText2, 5));
+    return (parser(VypisovanyText2, 5));
   }
   return String();
-}
-String parser(int x){
-
 }
 void setup()
 {
@@ -93,20 +132,25 @@ void loop()
     while (LoRa.available())
     { //prevedeni textu do jednoho stringu
       VypisovanyText += (VyslednyText + strlen(VyslednyText), "%c", (char)LoRa.read());
-  }
-  VypisovanyText2 = VypisovanyText; //vypsany text se uloží do druhé proměnné, aby se mohl načíst nový a s proměnnou stále pracovat
-  Serial.print(VypisovanyText);
-  display.setCursor(0, 0);
-  display.clearDisplay();
-  display.setTextColor(WHITE);
-  display.setTextSize(1);
-  display.println(WiFi.localIP());
-  display.println("Prijata Zprava: ");
-  display.println(VypisovanyText);
-  display.print("o sile (RSSI): ");
-  display.println(LoRa.packetRssi());
-  display.display();
-  delay(1000);
+    }
+    VypisovanyText2 = VypisovanyText; //vypsany text se uloží do druhé proměnné, aby se mohl načíst nový a s proměnnou stále pracovat
+    Serial.println(parser(VypisovanyText2, 1));
+    Serial.println(parser(VypisovanyText2, 2));
+    Serial.println(parser(VypisovanyText2, 3));
+    Serial.println(parser(VypisovanyText2, 4));
+    Serial.println(parser(VypisovanyText2, 5));
+    Serial.println(parser(VypisovanyText2, 6));
+    display.setCursor(0, 0);
+    display.clearDisplay();
+    display.setTextColor(WHITE);
+    display.setTextSize(1);
+    display.println(WiFi.localIP());
+    display.println("Prijata Zprava: ");
+    display.println(VypisovanyText);
+    display.print("o sile (RSSI): ");
+    display.println(LoRa.packetRssi());
+    display.display();
+    delay(100);
   }
   VypisovanyText = ""; //vynuluje vypisovaný text aby se nestakoval
 }
