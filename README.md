@@ -102,11 +102,11 @@ IV. Předpokládaný Harmonogram (15.09.2021)
 * Finální úpravy ❌
 * Zbytek času na to, pokud něco nebudu stíhat ❌
 * Udělat návrh obalu ❌
-* Vytisknout obal na 3d tiskárně ❌
 
 ### První polovina Prosince (Termín 10.12.2021)
 * Sepsat dokumentaci ❌
 * Poslední testy ❌
+* * Vytisknout obal na 3d tiskárně ❌
 
 IV. Konečný Harmonogram 
 -------------------------------------------
@@ -130,6 +130,7 @@ IV. Konečný Harmonogram
 * 18.11.2021 - Zprovoznění GPS + komunikace mezi LoRa zařízeními, drobné úpravy kódu
 * 20.11.2021 - Komunikace funguje, webserver funguje a dostává informace
 * 26.11.2021 - Práce na Stránce + zobrazení mapy 
+* 29.11.2021 - Úprava Wifi kódu + dokončení sender kódu + odstranění delay() v loopu
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 2. Sestavování
 
@@ -181,13 +182,21 @@ IV. Zprovoznění GPS + posílání mezi LoRa zařízeními
 V. Výpis informací na Webový server
 ------------------------------------
 * Informace z gps se rozparsují a posílají na webový server
-* Stránka se každých 10s refresne
+* Server se zeptá na informaci a esp mu ji pošle
+* Stránka se každých 10s refresne (chtělo by refreshovat pouze určitou část)
 
-VI. Detaily + využití informací z LoRa zařízení
----------------------------------------------------
+VI. Přístup uživatele
+---------------------
+* Esp vytvoří vlastní wifi, uživatel se může připojit, zadat do webserveru ip adresu a připojit se na webovou stránku
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 3. Finální úpravy a debugování
 
+I. Detaily + využití informací z LoRa zařízení
+----------------------------------------------
+* Snaha o zobrazení pozice na mapě 
+
+II. Dosah LoRa zařízení 
+-----------------------
 
 Odkazy a použíté technologie:
 -------
