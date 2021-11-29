@@ -99,8 +99,8 @@ IV. Předpokládaný Harmonogram (15.09.2021)
 * Debugování a chyby ❌
 
 ### Druhá polovina Listopadu
-* Finální úpravy ❌
-* Zbytek času na to, pokud něco nebudu stíhat ❌
+* Finální úpravy ✔️
+* Zbytek času na to, pokud něco nebudu stíhat ✔️
 * Udělat návrh obalu ❌
 
 ### První polovina Prosince (Termín 10.12.2021)
