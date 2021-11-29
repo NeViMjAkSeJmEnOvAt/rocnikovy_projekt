@@ -212,7 +212,7 @@ Odkazy a použíté technologie:
 * Tiny GPS kód - https://github.com/DzikuVx/esp32_gps_thingy/blob/master/gps_logger.ino //naprosty hrdina tento člověk !!!! ❤️❤️❤️
 * rtos vtasks - https://www.youtube.com/watch?v=95yUbClyf3E
 * password generator - https://www.codespeedy.com/generate-a-random-password-of-a-specific-length-in-cpp/
-* arduino wifi - https://randomnerdtutorials.com/esp32-useful-wi-fi-functions-arduino/
+* arduino wifi - https://randomnerdtutorials.com/esp32-access-point-ap-web-server/
 * esp delay nahrada - https://www.arduino.cc/en/Tutorial/BuiltInExamples/BlinkWithoutDelay
 * Google Maps - https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-html
 
