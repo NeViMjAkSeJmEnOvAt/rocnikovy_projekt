@@ -8,6 +8,8 @@
 #include "Wire.h"
 #include "string.h"
 #include "stdio.h"
+#include "WiFi.h"
+#include "ctime"
 
 #define PASMO 434E6 //pasmo pro Evropu
 #define OLED_RST 16
@@ -16,16 +18,31 @@
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
 
-const char *ssid = "MK 2.4GHz"; //nazev wifi, na kterou se zařízení připojí
-const char *password = "MK12345678";         //heslo k wifi
+const char HesloGen[] = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTVWXYZ"; //bude sloužit k vygenerování náhodného hesla
+int HesloGen_length = sizeof(HesloGen) - 1;
+const char *ssid = "Station"; //nazev wifi, na kterou se zařízení připojí
+char *password = "123456789"; //defaultní heslo
+const int passwordLength = 8;
 char VyslednyText[2];
 String VypisovanyText;
 String VypisovanyText2;
+const long intervalDisplay = 2000;
+const long intervalLoRa = 500;
+unsigned long DisplayMillis, LoRaMillis = 0;
 
 AsyncWebServer server(80);
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RST);
-
-String parser(String gps, int x)
+/*void SetPassword() //nastavi nahodne heslo pro wifi
+{
+  password = "";
+  srand(time(NULL));
+  for (int x = 0; x < passwordLength; x++)
+  {
+    password += HesloGen[rand() % 20];
+    Serial.println(password);
+  }
+}*/
+String Parser(String gps, int x)
 {
   switch (x)
   {
@@ -51,29 +68,29 @@ String processor(const String &var)
 {
   Serial.println(var);
   if (var == "GPS_LON")
-  { //pokud se webserver zeptá na identifikátor GPS, bude mu poslán VyslednyText
-    Serial.println(parser(VypisovanyText2, 1));
-    return (parser(VypisovanyText2, 1));
+  { //pokud se webserver zeptá na identifikátor GPS, bude mu poslán VypisovanyText
+    Serial.println(Parser(VypisovanyText2, 1));
+    return (Parser(VypisovanyText2, 1));
   }
   else if (var == "GPS_LAT")
-  { //pokud se webserver zeptá na identifikátor GPS, bude mu poslán VyslednyText
-    Serial.println(parser(VypisovanyText2, 2));
-    return (parser(VypisovanyText2, 2));
+  {
+    Serial.println(Parser(VypisovanyText2, 2));
+    return (Parser(VypisovanyText2, 2));
   }
   else if (var == "GPS_ALT")
-  { //pokud se webserver zeptá na identifikátor GPS, bude mu poslán VyslednyText
-    Serial.println(parser(VypisovanyText2, 3));
-    return (parser(VypisovanyText2, 3));
+  { 
+    Serial.println(Parser(VypisovanyText2, 3));
+    return (Parser(VypisovanyText2, 3));
   }
   else if (var == "GPS_TIME")
-  { //pokud se webserver zeptá na identifikátor GPS, bude mu poslán VyslednyText
-    Serial.println(parser(VypisovanyText2, 4));
-    return (parser(VypisovanyText2, 4));
+  { 
+    Serial.println(Parser(VypisovanyText2, 4));
+    return (Parser(VypisovanyText2, 4));
   }
   else if (var == "GPS_DATE")
-  { //pokud se webserver zeptá na identifikátor GPS, bude mu poslán VyslednyText
-    Serial.println(parser(VypisovanyText2, 5));
-    return (parser(VypisovanyText2, 5));
+  { 
+    Serial.println(Parser(VypisovanyText2, 5));
+    return (Parser(VypisovanyText2, 5));
   }
   return String();
 }
@@ -81,9 +98,11 @@ void setup()
 {
   Serial.begin(115200);
   Heltec.begin(false /*DisplayEnable Enable*/, true /*Heltec.LoRa Disable*/, true /*Serial Enable*/, true /*PABOOST Enable*/, PASMO /*long BAND*/); //nastaveni hardwaru
-
-  ////////////////display////////////////////
-
+  WiFi.mode(WIFI_AP_STA);
+  WiFi.softAP(ssid, NULL);
+  //SetPassword();
+  ////////////////display///////////////////////////////////////////////
+  //funkce pro nastavení displaye
   pinMode(OLED_RST, OUTPUT);
   digitalWrite(OLED_RST, LOW);
   delay(20);
@@ -97,22 +116,27 @@ void setup()
       ; // Nepůjde do nekonečna
   }
 
-  //////////////////////////pripojeni wifi////////////////////////////
+  display.setCursor(0, 0);
+  display.setTextColor(WHITE);
+  display.setTextSize(2);
+  display.clearDisplay();
+  display.print("Nacitani.");
+  display.display();
+  delay(1500);
+  display.clearDisplay();
+  display.setCursor(0, 0);
+  display.print("Nacitani..");
+  display.display();
+  delay(1500);
+
+  //////////////////pripojeni spiffsu////////////////////////////
 
   if (!SPIFFS.begin(true))
   { //inicializace SPIFFsu
     Serial.println("An Error has occurred while mounting SPIFFS");
     return;
   }
-  WiFi.begin(ssid, password); //připojení k wifi
-  while (WiFi.status() != WL_CONNECTED)
-  {
-    delay(2000);
-    Serial.println("Connecting to WiFi..");
-  }
-  Serial.println(WiFi.localIP()); //vypíše IP adresu zařízení
-
-  /////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////zapnuti serveru a pripojeni cest /////////////////////////
 
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request) { //cesta pro root / webové stránky
     request->send(SPIFFS, "/index.html", String(), false, processor);
@@ -122,35 +146,64 @@ void setup()
     request->send(SPIFFS, "/style.css", "text/css");
   });
   server.begin(); //zapne server
+
+  /////////////////////////////////////////////////////////////////////////////////////////////////
 }
 void loop()
 {
+
+  unsigned long TedMillis = millis();
   VypisovanyText == "";
   int velikostPaketu = LoRa.parsePacket();
-  if (velikostPaketu)
-  { //pokud se nejaký packet přijme spustí se funkce
-    while (LoRa.available())
-    { //prevedeni textu do jednoho stringu
-      VypisovanyText += (VyslednyText + strlen(VyslednyText), "%c", (char)LoRa.read());
+
+  if (TedMillis - LoRaMillis >= intervalLoRa)
+  {
+    if (velikostPaketu)
+    { //pokud se nejaký packet přijme spustí se funkce
+      while (LoRa.available())
+      { //prevedeni textu do jednoho stringu
+        VypisovanyText += (VyslednyText + strlen(VyslednyText), "%c", (char)LoRa.read());
+      }
+      VypisovanyText2 = VypisovanyText; //vypsany text se uloží do druhé proměnné, aby se mohl načíst nový a s proměnnou stále pracovat
+      LoRaMillis = TedMillis;
     }
-    VypisovanyText2 = VypisovanyText; //vypsany text se uloží do druhé proměnné, aby se mohl načíst nový a s proměnnou stále pracovat
-    Serial.println(parser(VypisovanyText2, 1));
-    Serial.println(parser(VypisovanyText2, 2));
-    Serial.println(parser(VypisovanyText2, 3));
-    Serial.println(parser(VypisovanyText2, 4));
-    Serial.println(parser(VypisovanyText2, 5));
-    Serial.println(parser(VypisovanyText2, 6));
-    display.setCursor(0, 0);
-    display.clearDisplay();
-    display.setTextColor(WHITE);
-    display.setTextSize(1);
-    display.println(WiFi.localIP());
-    display.println("Prijata Zprava: ");
-    display.println(VypisovanyText);
-    display.print("o sile (RSSI): ");
-    display.println(LoRa.packetRssi());
-    display.display();
-    delay(100);
+    if (TedMillis - DisplayMillis >= intervalDisplay)
+    {
+
+      Serial.println(Parser(VypisovanyText2, 1));
+      Serial.println(Parser(VypisovanyText2, 2));
+      Serial.println(Parser(VypisovanyText2, 3));
+      Serial.println(Parser(VypisovanyText2, 4));
+      Serial.println(Parser(VypisovanyText2, 5));
+      Serial.println(Parser(VypisovanyText2, 6));
+      Serial.println(password);
+      Serial.println(ssid);
+
+      display.setCursor(0, 0);
+      display.clearDisplay();
+      display.setTextColor(WHITE);
+      display.setTextSize(1);
+      display.println("----GPS sledovac----");
+      display.setCursor(15, 10);
+      display.print("Sila signalu:");
+      display.println(LoRa.packetRssi() * (-1));
+      display.setCursor(15, 20);
+      display.print("IP: ");
+      display.println(WiFi.softAPIP());
+      display.setCursor(15, 30);
+      display.print("Wifi: ");
+      display.println(ssid);
+      display.setCursor(15, 40);
+      display.print("Heslo: ");
+      display.println(password);
+      display.setCursor(0, 50);
+      display.println("--------------------");
+      
+
+      display.display();
+
+      DisplayMillis = TedMillis;
+    }
   }
   VypisovanyText = ""; //vynuluje vypisovaný text aby se nestakoval
 }
