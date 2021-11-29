@@ -214,6 +214,7 @@ Odkazy a použíté technologie:
 * password generator - https://www.codespeedy.com/generate-a-random-password-of-a-specific-length-in-cpp/
 * arduino wifi - https://randomnerdtutorials.com/esp32-access-point-ap-web-server/
 * esp delay nahrada - https://www.arduino.cc/en/Tutorial/BuiltInExamples/BlinkWithoutDelay
+* nastaveni wifi - https://gist.github.com/futechiot/ee0223dd269cbe7d8605ce97d120d7d2
 * Google Maps - https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-html
 
 
