@@ -129,6 +129,7 @@ IV. Konečný Harmonogram
 * 16.11.2021 - skládání recieveru + zprovozňování webového serveru
 * 18.11.2021 - Zprovoznění GPS + komunikace mezi LoRa zařízeními, drobné úpravy kódu
 * 20.11.2021 - Komunikace funguje, webserver funguje a dostává informace
+* 26.11.2021 - Práce na Stránce + zobrazení mapy 
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 2. Sestavování
 
@@ -179,6 +180,8 @@ IV. Zprovoznění GPS + posílání mezi LoRa zařízeními
 
 V. Výpis informací na Webový server
 ------------------------------------
+* Informace z gps se rozparsují a posílají na webový server
+* Stránka se každých 10s refresne
 
 VI. Detaily + využití informací z LoRa zařízení
 ---------------------------------------------------
@@ -208,6 +211,10 @@ Odkazy a použíté technologie:
 * náhodné YT video - https://www.davidjwatts.com/youtube/GPS-software-serial.ino
 * Tiny GPS kód - https://github.com/DzikuVx/esp32_gps_thingy/blob/master/gps_logger.ino //naprosty hrdina tento člověk !!!! ❤️❤️❤️
 * rtos vtasks - https://www.youtube.com/watch?v=95yUbClyf3E
+* password generator - https://www.codespeedy.com/generate-a-random-password-of-a-specific-length-in-cpp/
+* arduino wifi - https://randomnerdtutorials.com/esp32-access-point-ap-web-server/
+* esp delay nahrada - https://www.arduino.cc/en/Tutorial/BuiltInExamples/BlinkWithoutDelay
+* nastaveni wifi - https://gist.github.com/futechiot/ee0223dd269cbe7d8605ce97d120d7d2
 * Google Maps - https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-html
 
 
