@@ -91,22 +91,25 @@ IV. Předpokládaný Harmonogram (15.09.2021)
 
 ### Druhá polovina Říjnu
 * Začít psát kód ✔️
-* Sestavit hardware ❌
 * Udělat jednotlivé části kódu ✔️
+* Test zákldních funkcí ✔️
 
 ### První polovina Listopadu
 * Pomalu dokončovat Hardware kód - sestavit kód ✔️
-* Debugování a chyby ❌
+* Fungovaní webu ✔️
+* Fungování GPS a LoRa ✔️
 
 ### Druhá polovina Listopadu
 * Finální úpravy ✔️
-* Zbytek času na to, pokud něco nebudu stíhat ✔️
+* Grafická úprava stránky ✔️
 * Udělat návrh obalu ❌
 
-### První polovina Prosince (Termín 10.12.2021)
+### Prosinec (Termín 30.12.2021)
 * Sepsat dokumentaci ❌
-* Poslední testy ❌
-* * Vytisknout obal na 3d tiskárně ❌
+* Sestavit hardware ❌
+* Debugování a chyby ❌
+* Vytisknout obal na 3d tiskárně ❌
+* Zbytek času na to, pokud něco nebudu stíhat 
 
 IV. Konečný Harmonogram 
 -------------------------------------------
