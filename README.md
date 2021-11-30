@@ -1,6 +1,6 @@
 # Ročníkový projekt (Sledovací obojek pro psy) - část 1. Návrh projektu
 
-I. Cíl projektu (03.06.2021)
+I. Cíl projektu
 ----------------------------
 ### Hlavní informace
 - Vyvoření GPS sledovače (převážně pro psy) + jeho lokátor 
@@ -23,27 +23,32 @@ I. Cíl projektu (03.06.2021)
 - GPS má hroznou odchylku (1-10km) (opraveno - gps neodesilalo cele souradnice, jenom část)
 - Spiffs webserver nechce fungovat, funguje pouze samostatný 
 - Sender nefunguje, když je zapnutá jak GPS tak OLED display (napadá mě buď nedostatečný proud, nebo překrývání portů - budu to ignorovat, display není potřeba)
+- Problém s připojováním wifi, po opravě wifi vytváří access point (ostatní zařízení se mohou připojit), po zadání lokální IP se uživatel může připojit na webovou stránku
+- Mapa nebude fungovat, pokud nebude Esp připojeno k internetu + mapa potřebuje nějaké ID 
+- Možnost získat polohu z prohlížeče na vytvoření kompasu na stránce
+- Číst sílu signálu od LoRy a převést výstup na (dobrý, normální, špatný signál...)
+- Převedení formátu času z 9:15:4 na 09:15:04 kvůli parsování, to stejné s datem
 
-II. Informace získané ve škole (03.06.2021)
+II. Informace získané ve škole
 -------------------------------------------
 ### Informace k projektu
-- Zdroje (KONKURENCE, zdroje co pouzivame) 
-- Problémy se kterymi sme se setkali
+- Zdroje (KONKURENCE, zdroje co pouzivame) ✔
+- Problémy se kterymi sme se setkali ✔
 - 14 stránek
-- Použití (ki cad)
+- Použití (ki cad) ✔
 - projekt nemusí být na 100% funkční, musí být vidět postup
 - jak debugovat esp
-- framework
-- SPIFFS
+- framework ✔
+- SPIFFS ✔
 - OTA update
-- nepoužívat delay
-### Hodnocení projektu (16.06.2021)
+- nepoužívat delay ✔
+### Hodnocení projektu
 - projekt samotný - __40%__
 - dokumentace - __20%__ (všechny informace o projektu, problémy, časové rozvržení, časová náročnost..)
 - prezentace - __20%__ ()
 - průběžnost - __20%__ (jak se na projektu pracuje postupně)
 
-III. Konkurence (16.06.2021)
+III. Konkurence
 -------------------------------------------
 - Eshop [Elektro obojky](https://www.elektro-obojky.cz/gps-obojky-pro-psy/)
 ### Garmin
@@ -78,7 +83,7 @@ III. Konkurence (16.06.2021)
 * kompas
 * ukládání bodů na mapě
 
-IV. Předpokládaný Harmonogram (15.09.2021)
+IV. Předpokládaný Harmonogram
 -------------------------------------------
 ### Září
 * Sepsat nutné zdroje ✔️
@@ -101,7 +106,7 @@ IV. Předpokládaný Harmonogram (15.09.2021)
 
 ### Druhá polovina Listopadu
 * Finální úpravy ✔️
-* Grafická úprava stránky ✔️
+* Grafická úprava stránky ❌
 * Udělat návrh obalu ❌
 
 ### Prosinec (Termín 30.12.2021)
@@ -134,6 +139,7 @@ IV. Konečný Harmonogram
 * 20.11.2021 - Komunikace funguje, webserver funguje a dostává informace
 * 26.11.2021 - Práce na Stránce + zobrazení mapy 
 * 29.11.2021 - Úprava Wifi kódu + dokončení sender kódu + odstranění delay() v loopu
+* 30.11.2021 - úprava Githubu, sepsání problémů + řešení
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 2. Sestavování
 
@@ -190,19 +196,25 @@ V. Výpis informací na Webový server
 
 VI. Přístup uživatele
 ---------------------
-* Esp vytvoří vlastní wifi, uživatel se může připojit, zadat do webserveru ip adresu a připojit se na webovou stránku
+* Esp vytvoří vlastní wifi 
+* Uživatel se může připojit, zadat do webserveru ip adresu a připojit se na webovou stránku
+* IP adresa, heslo a ssid je vypsáno na Espčku, aby se uživatel mohl připojit
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 3. Finální úpravy a debugování
 
-I. Detaily + využití informací z LoRa zařízení
-----------------------------------------------
+I. Využití informací z LoRa zařízení
+------------------------------------
 * Snaha o zobrazení pozice na mapě 
+* Převedení RSSI na srozumitelnou informaci (perfektní, dobrý, špatný signál...)
+* Vytvoření kompasu ? pomocí informací z webového prohlížeče
+* Vypisování času na webu z GPS 
 
-II. Dosah LoRa zařízení 
------------------------
+II. Dosah LoRa zařízení + testy komunikace
+------------------------------------------
+* první test dosál vzdálenosti asi 1,5km (terén docela nepřístupný)
 
 Odkazy a použíté technologie:
--------
+-----------------------------
 * Markdown - [wikipedie](https://cs.wikipedia.org/wiki/Markdown)
 * Micropython - [Micropython](https://randomnerdtutorials.com/micropython-esp32-esp8266-vs-code-pymakr/), [Instalace](https://blog.iservery.com/2020/04/06/instalace-micropython-a-vscode/)
 * esp32 debugger - [Debugger](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/jtag-debugging/using-debugger.html), [Github](https://github.com/maakbaas/esp8266-iot-framework)
