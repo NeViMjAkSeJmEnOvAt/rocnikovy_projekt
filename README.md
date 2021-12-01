@@ -239,6 +239,7 @@ Odkazy a použíté technologie:
 * arduino wifi - https://randomnerdtutorials.com/esp32-access-point-ap-web-server/
 * esp delay nahrada - https://www.arduino.cc/en/Tutorial/BuiltInExamples/BlinkWithoutDelay
 * nastaveni wifi - https://gist.github.com/futechiot/ee0223dd269cbe7d8605ce97d120d7d2
+* ESP rest api endpoints - https://www.mischianti.org/2020/05/16/how-to-create-a-rest-server-on-esp8266-and-esp32-startup-part-1/
 * Google Maps - https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-html
 
 
