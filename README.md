@@ -1,9 +1,8 @@
-# Ročníkový projekt (Sledovací obojek pro psy) - část 1. Návrh projektu
-! INFO !
---------
 ### PlatformIO + VisualStudio Code
 ### Finální projekt v adresáři "Final V1"
 ### Projekt ještě není dokončený
+
+# Ročníkový projekt (Sledovací obojek pro psy) - část 1. Návrh projektu
 
 I. Cíl projektu
 ----------------------------
