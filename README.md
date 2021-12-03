@@ -1,3 +1,4 @@
+# INFO
 > PlatformIO + VisualStudio Code
 > Finální projekt v adresáři "Final V1"
 > Projekt ještě není dokončený
