@@ -3,13 +3,14 @@
 #include "Adafruit_GFX.h"
 #include "Adafruit_SSD1306.h"
 #include "ESPAsyncWebServer.h"
-#include "SoftwareSerial.h"
 #include "SPIFFS.h"
 #include "Wire.h"
 #include "string.h"
 #include "stdio.h"
 #include "WiFi.h"
 #include "ctime"
+#include "ArduinoJson.h"
+#include "SoftwareSerial.h"
 
 #define PASMO 434E6 //pasmo pro Evropu
 #define OLED_RST 16
@@ -29,6 +30,7 @@ String VypisovanyText2;
 const long intervalDisplay = 2000;
 const long intervalLoRa = 500;
 unsigned long DisplayMillis, LoRaMillis = 0;
+DynamicJsonDocument doc(1024);
 
 AsyncWebServer server(80);
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RST);
@@ -42,65 +44,10 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RST);
     Serial.println(password);
   }
 }*/
-String Parser(String gps, int x)
-{
-  switch (x)
-  {
-  case 1: //longitude
-    return (gps.substring(0, 10));
-    break;
-  case 2: //latitude
-    return (gps.substring(10, 20));
-    break;
-  case 3: //altitude
-    return (gps.substring(20, 27));
-    break;
-  case 4: //cas
-    return (gps.substring(27, 35));
-    break;
-  case 5: //datum
-    return (gps.substring(35, 45));
-    break;
-  case 6: //pocet satelitu
-    return (gps.substring(45, 47));
-    break;
-  }
-}
-
 String processor(const String &var)
 {
-  Serial.println(var);
-  if (var == "GPS_LON")
-  { //pokud se webserver zeptá na identifikátor GPS, bude mu poslán VypisovanyText
-    Serial.println(Parser(VypisovanyText2, 1));
-    return (Parser(VypisovanyText2, 1));
-  }
-  else if (var == "GPS_LAT")
-  {
-    Serial.println(Parser(VypisovanyText2, 2));
-    return (Parser(VypisovanyText2, 2));
-  }
-  else if (var == "GPS_ALT")
-  {
-    Serial.println(Parser(VypisovanyText2, 3));
-    return (Parser(VypisovanyText2, 3));
-  }
-  else if (var == "GPS_TIME")
-  {
-    Serial.println(Parser(VypisovanyText2, 4));
-    return (Parser(VypisovanyText2, 4));
-  }
-  else if (var == "GPS_DATE")
-  {
-    Serial.println(Parser(VypisovanyText2, 5));
-    return (Parser(VypisovanyText2, 5));
-  }
-  else if (var == "GPS_SATEL")
-  {
-    Serial.println(Parser(VypisovanyText2, 6));
-    return (Parser(VypisovanyText2, 6));
-  }
-  return String();
+  //Serial.println(var);
+  return String("sus");
 }
 void setup()
 {
@@ -174,42 +121,37 @@ void loop()
       }
       VypisovanyText2 = VypisovanyText; //vypsany text se uloží do druhé proměnné, aby se mohl načíst nový a s proměnnou stále pracovat
       LoRaMillis = TedMillis;
+      deserializeJson(doc, VypisovanyText);
     }
     if (TedMillis - DisplayMillis >= intervalDisplay)
     {
-
-      Serial.println(Parser(VypisovanyText2, 1));
-      Serial.println(Parser(VypisovanyText2, 2));
-      Serial.println(Parser(VypisovanyText2, 3));
-      Serial.println(Parser(VypisovanyText2, 4));
-      Serial.println(Parser(VypisovanyText2, 5));
-      Serial.println(Parser(VypisovanyText2, 6));
       Serial.println(password);
       Serial.println(ssid);
+      String latitude = doc["lat"];
+      Serial.println(latitude);
 
       display.setCursor(0, 0);
       display.clearDisplay();
       display.setTextColor(WHITE);
       display.setTextSize(1);
       display.println("----GPS sledovac----");
-      display.setCursor(13, 10);
-      display.print("Sila signalu: ");
+      display.setCursor(15, 10);
+      display.print("Sila signalu:");
       display.println(LoRa.packetRssi() * (-1));
-      display.setCursor(13, 20);
+      display.setCursor(15, 20);
       display.print("IP: ");
       display.println(WiFi.softAPIP());
-      display.setCursor(13, 30);
+      display.setCursor(15, 30);
       display.print("Wifi: ");
       display.println(ssid);
-      display.setCursor(13, 40);
+      display.setCursor(15, 40);
       display.print("Heslo: ");
       display.println(password);
-      display.setCursor(13, 50);
+      display.setCursor(15, 50);
       display.print("Pocet satelitu: ");
-      display.println(Parser(VypisovanyText2, 6));
+      display.println("ss");
       display.setCursor(0, 60);
       display.println("--------------------");
-
       display.display();
 
       DisplayMillis = TedMillis;

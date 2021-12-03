@@ -1,6 +1,7 @@
 #include "heltec.h"
 #include "TinyGPS++.h"
 #include "HardwareSerial.h"
+#include "ArduinoJson.h"
 #define PASMO 434E6                      //LoRa pasmo pro Evropu
 unsigned long GPSMillis, LoRaMillis = 0; //uloží čas pro GPS a LoRA
 const long intervalGPS = 2000;           //interval ve kterém se bude funkce spouštět pro GPS
@@ -8,6 +9,8 @@ const long intervalLoRa = 3000;          //interval ve kterém se bude funkce sp
 
 TinyGPSPlus gps;
 HardwareSerial SerialGPS(1);
+DynamicJsonDocument doc(1024);
+
 
 void setup()
 {
@@ -38,73 +41,20 @@ void loop()
     Serial.print("SAT=");
     Serial.println(gps.satellites.value());
 
-    //duvod, proc je to v podminkach je, protože potřebuju aby výsledek byl ve dvojciferném výsledku př: 12:42:33
-    //když je číslo menší než 1, je výpis: 9:5:3, po úpravě to vyjde 09:05:03
+    doc["lat"] = gps.location.lat();
+    doc["lon"] = gps.location.lng();
+    doc["alt"] = gps.altitude.meters();
+    doc["hour"] = gps.time.hour();
+    doc["min"] = gps.time.minute();
+    doc["sec"] = gps.time.second();
+    doc["day"] = gps.date.day();
+    doc["mon"] = gps.date.month();
+    doc["year"] = gps.date.year();
+    doc["sat"] = gps.satellites.value();
+    serializeJson(doc, Serial);
+
     LoRa.beginPacket();
-    LoRa.print(gps.location.lng(), 7);
-    LoRa.print(gps.location.lat(), 7);
-    if(gps.altitude.meters() < 1){
-      LoRa.print(100.000);
-    }
-    else{
-      LoRa.print(gps.altitude.meters());
-    }
-    
-    if (gps.time.hour() < 10)
-    {
-      LoRa.print("0");
-      LoRa.print(gps.time.hour() + 1);
-      LoRa.print(":");
-    }
-    else
-    {
-      LoRa.print(gps.time.hour() + 1);
-      LoRa.print(":");
-    }
-    if (gps.time.minute() < 10)
-    {
-      LoRa.print("0");
-      LoRa.print(gps.time.minute());
-      LoRa.print(":");
-    }
-    else
-    {
-      LoRa.print(gps.time.minute());
-      LoRa.print(":");
-    }
-    if (gps.time.second() < 10)
-    {
-      LoRa.print("0");
-      LoRa.print(gps.time.second());
-    }
-    else
-    {
-      LoRa.print(gps.time.second());
-    }
-    if (gps.date.day() < 10)
-    {
-      LoRa.print("0");
-      LoRa.print(gps.date.day());
-      LoRa.print(".");
-    }
-    else
-    {
-      LoRa.print(gps.date.day());
-      LoRa.print(".");
-    }
-    if (gps.date.month() < 10)
-    {
-      LoRa.print("0");
-      LoRa.print(gps.date.month());
-      LoRa.print(".");
-    }
-    else
-    {
-      LoRa.print(gps.date.month());
-      LoRa.print(".");
-    }
-    LoRa.print(gps.date.year());
-    LoRa.println(gps.satellites.value());
+    LoRa.println(serializeJson(doc, Serial));
     LoRa.endPacket();
     LoRaMillis = TedMillis;
   }

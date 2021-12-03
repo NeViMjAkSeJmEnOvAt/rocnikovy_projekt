@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ESP32 Web Server</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-16">
+  <link rel="icon" href="data:">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta http-equiv="refresh" content="10">
+  <script>
+    // Initialize and add the map
+    function initMap() {
+      // The location of Uluru
+      const uluru = { lat: -25.344, lng: 131.036 };
+      // The map, centered at Uluru
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 4,
+        center: uluru,
+      });
+      // The marker, positioned at Uluru
+      const marker = new google.maps.Marker({
+        position: uluru,
+        map: map,
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <div id="vypisovani">
+    <h1>Data z GPS zařízení</h1>
+    <p>Zeměpisná Délka: <strong> %GPS_LON% </strong></p>
+    <p>Zeměpisná Šířka <strong> %GPS_LAT% </strong></p>
+    <p>Výška: <strong> %GPS_ALT% </strong> metrů nad mořem</p>
+    <p>Čas: <strong> %GPS_TIME% </strong></p>
+    <p>Datum: <strong> %GPS_DATE% </strong></p>
+  </div>
+  <div id="map" style="height: 400px; width: 100%;"></div>
+
+</body>
+
+</html>
