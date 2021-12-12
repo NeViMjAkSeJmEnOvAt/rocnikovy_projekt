@@ -1,3 +1,8 @@
+# INFO
+- PlatformIO + VisualStudio Code
+- Finální projekt v adresáři "Final V1"
+- Projekt ještě není dokončený
+
 # Ročníkový projekt (Sledovací obojek pro psy) - část 1. Návrh projektu
 
 I. Cíl projektu
@@ -140,6 +145,7 @@ IV. Konečný Harmonogram
 * 26.11.2021 - Práce na Stránce + zobrazení mapy 
 * 29.11.2021 - Úprava Wifi kódu + dokončení sender kódu + odstranění delay() v loopu
 * 30.11.2021 - úprava Githubu, sepsání problémů + řešení
+* 03.12.2021 - úprava komunikace mezi ESP32 zařízeními
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 2. Sestavování
 
@@ -149,7 +155,7 @@ I. Zporvoznění Arduino IDE pro ESP32 (později PlatformIO)
 * Spuštění programu na vyhledání sítě, úspěšně splněno
 * Vyřešený problém - systémový monitor vypisoval corruptované výsledky, musel sem změnit počet baudů
 * Dále test displaye
-* Víte informací v adresáři "ESPtest1"
+* Více informací v adresáři "ESPtest1"
 
 II. Instalace PlatformioIDE + SPIFFS
 --------------------------------------
