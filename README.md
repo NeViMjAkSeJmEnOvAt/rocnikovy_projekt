@@ -33,6 +33,7 @@ I. Cíl projektu
 - Možnost získat polohu z prohlížeče na vytvoření kompasu na stránce
 - Číst sílu signálu od LoRy a převést výstup na (dobrý, normální, špatný signál...)
 - Převedení formátu času z 9:15:4 na 09:15:04 kvůli parsování, to stejné s datem
+- Automatický update webu, nefungoval JQUERY (vyřešeno, špatná cesta k souboru)
 
 II. Informace získané ve škole
 -------------------------------------------
@@ -146,6 +147,7 @@ IV. Konečný Harmonogram
 * 29.11.2021 - Úprava Wifi kódu + dokončení sender kódu + odstranění delay() v loopu
 * 30.11.2021 - úprava Githubu, sepsání problémů + řešení
 * 03.12.2021 - úprava komunikace mezi ESP32 zařízeními
+* 12.12.2021 - automatické obnovování textu na webu pomocí jquery
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 2. Sestavování
 
@@ -199,6 +201,7 @@ V. Výpis informací na Webový server
 * Informace z gps se rozparsují a posílají na webový server
 * Server se zeptá na informaci a esp mu ji pošle
 * Stránka se každých 10s refresne (chtělo by refreshovat pouze určitou část)
+* edit: nyní se refreshuje pouze vybraný text, časový limit je 3 sekundy
 
 VI. Přístup uživatele
 ---------------------
@@ -214,6 +217,7 @@ I. Využití informací z LoRa zařízení
 * Převedení RSSI na srozumitelnou informaci (perfektní, dobrý, špatný signál...)
 * Vytvoření kompasu ? pomocí informací z webového prohlížeče
 * Vypisování času na webu z GPS 
+* 
 
 II. Dosah LoRa zařízení + testy komunikace
 ------------------------------------------
@@ -247,6 +251,8 @@ Odkazy a použíté technologie:
 * nastaveni wifi - https://gist.github.com/futechiot/ee0223dd269cbe7d8605ce97d120d7d2
 * ESP rest api endpoints - https://www.mischianti.org/2020/05/16/how-to-create-a-rest-server-on-esp8266-and-esp32-startup-part-1/
 * Google Maps - https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-html
+* jquery help - https://javarevisited.blogspot.com/2016/04/3-ways-to-solve-jquery-uncaught-reference-error-is-not-defined.html
+* jquery update - https://stackoverflow.com/questions/33801650/how-do-i-refresh-a-div-content
 
 
 
