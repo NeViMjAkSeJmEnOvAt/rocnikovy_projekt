@@ -253,6 +253,7 @@ Odkazy a použíté technologie:
 * Google Maps - https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-html
 * jquery help - https://javarevisited.blogspot.com/2016/04/3-ways-to-solve-jquery-uncaught-reference-error-is-not-defined.html
 * jquery update - https://stackoverflow.com/questions/33801650/how-do-i-refresh-a-div-content
+* rest api - https://github.com/superucitelka/SmartWatch-REST
 
 
 
