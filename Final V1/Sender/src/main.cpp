@@ -44,7 +44,7 @@ void loop()
     LoRa.print(gps.location.lng(), 7);
     LoRa.print(gps.location.lat(), 7);
     if(gps.altitude.meters() < 1){
-      LoRa.print(100.000);
+      LoRa.print(100.00);
     }
     else{
       LoRa.print(gps.altitude.meters());

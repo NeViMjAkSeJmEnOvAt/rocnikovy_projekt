@@ -18,8 +18,8 @@
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
 
-const char HesloGen[] = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTVWXYZ"; //bude sloužit k vygenerování náhodného hesla
-int HesloGen_length = sizeof(HesloGen) - 1;
+//const char HesloGen[] = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTVWXYZ"; //bude sloužit k vygenerování náhodného hesla
+//int HesloGen_length = sizeof(HesloGen) - 1;
 const char *ssid = "Station"; //nazev wifi, na kterou se zařízení připojí
 char *password = "123456789"; //defaultní heslo
 const int passwordLength = 8;
@@ -32,16 +32,7 @@ unsigned long DisplayMillis, LoRaMillis = 0;
 
 AsyncWebServer server(80);
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RST);
-/*void SetPassword() //nastavi nahodne heslo pro wifi
-{
-  password = "";
-  srand(time(NULL));
-  for (int x = 0; x < passwordLength; x++)
-  {
-    password += HesloGen[rand() % 20];
-    Serial.println(password);
-  }
-}*/
+
 String Parser(String gps, int x)
 {
   switch (x)
@@ -53,16 +44,16 @@ String Parser(String gps, int x)
     return (gps.substring(10, 20));
     break;
   case 3: //altitude
-    return (gps.substring(20, 27));
+    return (gps.substring(20, 26));
     break;
   case 4: //cas
-    return (gps.substring(27, 35));
+    return (gps.substring(26, 34));
     break;
   case 5: //datum
-    return (gps.substring(35, 45));
+    return (gps.substring(34, 44));
     break;
   case 6: //pocet satelitu
-    return (gps.substring(45, 47));
+    return (gps.substring(44, 45));
     break;
   }
 }
@@ -153,13 +144,17 @@ void setup()
   server.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request) { //cesta pro .css soubor
     request->send(SPIFFS, "/style.css", "text/css");
   });
+
+  server.on("/jquery-3.6.0.min.js", HTTP_GET, [](AsyncWebServerRequest *request) { //cesta pro jquery
+    request->send(SPIFFS, "/jquery-3.6.0.min.js", "text/javascript");
+  });
+
   server.begin(); //zapne server
 
   /////////////////////////////////////////////////////////////////////////////////////////////////
 }
 void loop()
 {
-
   unsigned long TedMillis = millis();
   VypisovanyText == "";
   int velikostPaketu = LoRa.parsePacket();

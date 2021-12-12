@@ -3,14 +3,13 @@
 #include "Adafruit_GFX.h"
 #include "Adafruit_SSD1306.h"
 #include "ESPAsyncWebServer.h"
+#include "SoftwareSerial.h"
 #include "SPIFFS.h"
 #include "Wire.h"
 #include "string.h"
 #include "stdio.h"
 #include "WiFi.h"
 #include "ctime"
-#include "ArduinoJson.h"
-#include "SoftwareSerial.h"
 
 #define PASMO 434E6 //pasmo pro Evropu
 #define OLED_RST 16
@@ -19,8 +18,8 @@
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
 
-const char HesloGen[] = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTVWXYZ"; //bude sloužit k vygenerování náhodného hesla
-int HesloGen_length = sizeof(HesloGen) - 1;
+//const char HesloGen[] = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTVWXYZ"; //bude sloužit k vygenerování náhodného hesla
+//int HesloGen_length = sizeof(HesloGen) - 1;
 const char *ssid = "Station"; //nazev wifi, na kterou se zařízení připojí
 char *password = "123456789"; //defaultní heslo
 const int passwordLength = 8;
@@ -30,24 +29,69 @@ String VypisovanyText2;
 const long intervalDisplay = 2000;
 const long intervalLoRa = 500;
 unsigned long DisplayMillis, LoRaMillis = 0;
-DynamicJsonDocument doc(1024);
 
 AsyncWebServer server(80);
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RST);
-/*void SetPassword() //nastavi nahodne heslo pro wifi
+
+String Parser(String gps, int x)
 {
-  password = "";
-  srand(time(NULL));
-  for (int x = 0; x < passwordLength; x++)
+  switch (x)
   {
-    password += HesloGen[rand() % 20];
-    Serial.println(password);
+  case 1: //longitude
+    return (gps.substring(0, 10));
+    break;
+  case 2: //latitude
+    return (gps.substring(10, 20));
+    break;
+  case 3: //altitude
+    return (gps.substring(20, 26));
+    break;
+  case 4: //cas
+    return (gps.substring(26, 34));
+    break;
+  case 5: //datum
+    return (gps.substring(34, 44));
+    break;
+  case 6: //pocet satelitu
+    return (gps.substring(44, 45));
+    break;
   }
-}*/
+}
+
 String processor(const String &var)
 {
-  //Serial.println(var);
-  return String("sus");
+  Serial.println(var);
+  if (var == "GPS_LON")
+  { //pokud se webserver zeptá na identifikátor GPS, bude mu poslán VypisovanyText
+    Serial.println(Parser(VypisovanyText2, 1));
+    return (Parser(VypisovanyText2, 1));
+  }
+  else if (var == "GPS_LAT")
+  {
+    Serial.println(Parser(VypisovanyText2, 2));
+    return (Parser(VypisovanyText2, 2));
+  }
+  else if (var == "GPS_ALT")
+  {
+    Serial.println(Parser(VypisovanyText2, 3));
+    return (Parser(VypisovanyText2, 3));
+  }
+  else if (var == "GPS_TIME")
+  {
+    Serial.println(Parser(VypisovanyText2, 4));
+    return (Parser(VypisovanyText2, 4));
+  }
+  else if (var == "GPS_DATE")
+  {
+    Serial.println(Parser(VypisovanyText2, 5));
+    return (Parser(VypisovanyText2, 5));
+  }
+  else if (var == "GPS_SATEL")
+  {
+    Serial.println(Parser(VypisovanyText2, 6));
+    return (Parser(VypisovanyText2, 6));
+  }
+  return String();
 }
 void setup()
 {
@@ -100,13 +144,17 @@ void setup()
   server.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request) { //cesta pro .css soubor
     request->send(SPIFFS, "/style.css", "text/css");
   });
+
+  server.on("/jquery-3.6.0.min.js", HTTP_GET, [](AsyncWebServerRequest *request) { //cesta pro jquery
+    request->send(SPIFFS, "/jquery-3.6.0.min.js", "text/javascript");
+  });
+
   server.begin(); //zapne server
 
   /////////////////////////////////////////////////////////////////////////////////////////////////
 }
 void loop()
 {
-
   unsigned long TedMillis = millis();
   VypisovanyText == "";
   int velikostPaketu = LoRa.parsePacket();
@@ -121,37 +169,42 @@ void loop()
       }
       VypisovanyText2 = VypisovanyText; //vypsany text se uloží do druhé proměnné, aby se mohl načíst nový a s proměnnou stále pracovat
       LoRaMillis = TedMillis;
-      deserializeJson(doc, VypisovanyText);
     }
     if (TedMillis - DisplayMillis >= intervalDisplay)
     {
+
+      Serial.println(Parser(VypisovanyText2, 1));
+      Serial.println(Parser(VypisovanyText2, 2));
+      Serial.println(Parser(VypisovanyText2, 3));
+      Serial.println(Parser(VypisovanyText2, 4));
+      Serial.println(Parser(VypisovanyText2, 5));
+      Serial.println(Parser(VypisovanyText2, 6));
       Serial.println(password);
       Serial.println(ssid);
-      String latitude = doc["lat"];
-      Serial.println(latitude);
 
       display.setCursor(0, 0);
       display.clearDisplay();
       display.setTextColor(WHITE);
       display.setTextSize(1);
       display.println("----GPS sledovac----");
-      display.setCursor(15, 10);
-      display.print("Sila signalu:");
+      display.setCursor(13, 10);
+      display.print("Sila signalu: ");
       display.println(LoRa.packetRssi() * (-1));
-      display.setCursor(15, 20);
+      display.setCursor(13, 20);
       display.print("IP: ");
       display.println(WiFi.softAPIP());
-      display.setCursor(15, 30);
+      display.setCursor(13, 30);
       display.print("Wifi: ");
       display.println(ssid);
-      display.setCursor(15, 40);
+      display.setCursor(13, 40);
       display.print("Heslo: ");
       display.println(password);
-      display.setCursor(15, 50);
+      display.setCursor(13, 50);
       display.print("Pocet satelitu: ");
-      display.println("ss");
+      display.println(Parser(VypisovanyText2, 6));
       display.setCursor(0, 60);
       display.println("--------------------");
+
       display.display();
 
       DisplayMillis = TedMillis;

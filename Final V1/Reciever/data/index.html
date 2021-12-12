@@ -7,23 +7,11 @@
   <meta charset="UTF-16">
   <link rel="icon" href="data:">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <meta http-equiv="refresh" content="10">
+  <script src="jquery-3.6.0.min.js"></script>
   <script>
-    // Initialize and add the map
-    function initMap() {
-      // The location of Uluru
-      const uluru = { lat: -25.344, lng: 131.036 };
-      // The map, centered at Uluru
-      const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 4,
-        center: uluru,
-      });
-      // The marker, positioned at Uluru
-      const marker = new google.maps.Marker({
-        position: uluru,
-        map: map,
-      });
-    }
+    setInterval(function updateDiv() {
+      $("#vypisovani").load(window.location.href + " #vypisovani");
+    }, 3000);
   </script>
 </head>
 
@@ -36,8 +24,8 @@
     <p>Čas: <strong> %GPS_TIME% </strong></p>
     <p>Datum: <strong> %GPS_DATE% </strong></p>
   </div>
-  <div id="map" style="height: 400px; width: 100%;"></div>
-
+  <div>
+  </div>
 </body>
 
 </html>
