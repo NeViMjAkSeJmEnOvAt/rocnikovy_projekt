@@ -148,6 +148,7 @@ IV. Konečný Harmonogram
 * 30.11.2021 - úprava Githubu, sepsání problémů + řešení
 * 03.12.2021 - úprava komunikace mezi ESP32 zařízeními
 * 12.12.2021 - automatické obnovování textu na webu pomocí jquery
+* 14.12.2020 - vyřešení maximální velikosti SPIFFS, nahrání map na ESP
 
 # Ročníkový projekt (Sledovací obojek pro psy) - část 2. Sestavování
 
@@ -254,6 +255,8 @@ Odkazy a použíté technologie:
 * jquery help - https://javarevisited.blogspot.com/2016/04/3-ways-to-solve-jquery-uncaught-reference-error-is-not-defined.html
 * jquery update - https://stackoverflow.com/questions/33801650/how-do-i-refresh-a-div-content
 * rest api - https://github.com/superucitelka/SmartWatch-REST
+* partitions - https://github.com/espressif/arduino-esp32/tree/master/tools/partitions
+* platformio, partitions - https://docs.platformio.org/en/latest/platforms/espressif32.html#partition-tables
 
 
 
