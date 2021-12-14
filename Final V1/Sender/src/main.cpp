@@ -41,8 +41,19 @@ void loop()
     //duvod, proc je to v podminkach je, protože potřebuju aby výsledek byl ve dvojciferném výsledku př: 12:42:33
     //když je číslo menší než 1, je výpis: 9:5:3, po úpravě to vyjde 09:05:03
     LoRa.beginPacket();
-    LoRa.print(gps.location.lng(), 7);
-    LoRa.print(gps.location.lat(), 7);
+    if(gps.location.lng() < 1){
+      LoRa.print(00.0000000);
+    }
+    else{
+      LoRa.print(gps.location.lng(), 7);
+    }
+    
+    if(gps.location.lat() < 1){
+      LoRa.print(00.0000000);
+    }
+    else{
+      LoRa.print(gps.location.lat(), 7);
+    }
     if(gps.altitude.meters() < 1){
       LoRa.print(100.00);
     }

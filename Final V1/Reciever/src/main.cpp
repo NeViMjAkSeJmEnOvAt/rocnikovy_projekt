@@ -149,6 +149,18 @@ void setup()
     request->send(SPIFFS, "/jquery-3.6.0.min.js", "text/javascript");
   });
 
+  server.on("/leaflet/leaflet.js", HTTP_GET, [](AsyncWebServerRequest *request) { //cesta pro jquery
+    request->send(SPIFFS, "/leaflet/leaflet.js", "text/javascript");
+  });
+
+  server.on("/leaflet/leaflet.css", HTTP_GET, [](AsyncWebServerRequest *request) { //cesta pro jquery
+    request->send(SPIFFS, "/leaflet/leaflet.css", "text/css");
+  });
+
+  server.on("/leaflet/leaflet.js.map", HTTP_GET, [](AsyncWebServerRequest *request) { //cesta pro jquery
+    request->send(SPIFFS, "/leaflet/leaflet.js.map");
+  });
+
   server.begin(); //zapne server
 
   /////////////////////////////////////////////////////////////////////////////////////////////////

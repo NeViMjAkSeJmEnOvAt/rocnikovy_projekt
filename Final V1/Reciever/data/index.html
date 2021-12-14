@@ -7,11 +7,14 @@
   <meta charset="UTF-16">
   <link rel="icon" href="data:">
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="leaflet/leaflet.css">
   <script src="jquery-3.6.0.min.js"></script>
+  <script src="leaflet/leaflet.js"></script>
+  <script src="leaflet/leaflet.js.map"></script>
   <script>
     setInterval(function updateDiv() {
       $("#vypisovani").load(window.location.href + " #vypisovani");
-    }, 3000);
+    }, 5000);
   </script>
 </head>
 
@@ -24,8 +27,7 @@
     <p>Čas: <strong> %GPS_TIME% </strong></p>
     <p>Datum: <strong> %GPS_DATE% </strong></p>
   </div>
-  <div>
-  </div>
+  <div id="map"></div>
 </body>
 
 </html>
